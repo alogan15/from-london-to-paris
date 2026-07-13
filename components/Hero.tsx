@@ -5,10 +5,7 @@ export default function Hero() {
     <section className="flex min-h-screen items-center justify-center bg-[#050505] px-6 pt-24">
       <div className="mx-auto max-w-5xl text-center">
 
-        {/* Company */}
-        {/* <p className="mb-6 text-sm uppercase tracking-[0.4em] text-[#D4AF37]">
-          FROM LONDON TO PARIS
-        </p> */}
+    
 
         {/* Headline */}
         <h1 className="text-5xl font-extrabold leading-tight tracking-tight md:text-7xl lg:text-8xl">
@@ -16,17 +13,14 @@ export default function Hero() {
           <br />
           build websites.
           <br />
-          <span className="text-[#D4AF37]">
+          <span className="text-15xl text-[#D4AF37]">
             We create digital solutions.
           </span>
         </h1>
 
         {/* Supporting Text */}
         <p className="mx-auto mt-8 max-w-3xl text-lg leading-8 text-gray-400 md:text-xl">
-          From custom websites and web applications to coding education,
-          QR experiences, and business automation, we help entrepreneurs,
-          organizations, and creators turn ideas into reality.
-        </p>
+From custom websites and web applications to coding education, QR experiences, AI solutions, and business automation, we create digital solutions that help entrepreneurs, organizations, and creators turn ideas into reality.        </p>
 
         {/* Buttons */}
         <div className="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row">

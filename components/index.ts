@@ -1,0 +1,8 @@
+export { default as Navbar } from "./Navbar"
+export { default as Hero } from "./Hero"
+export { default as Learn } from "./Learn"
+export { default as Build } from "./Build"
+export { default as Launch } from "./Launch"
+export { default as FeaturedProjects } from "./FeaturedProjects"
+export { default as CTA } from "./CTA"
+export { default as Footer } from "./Footer"    

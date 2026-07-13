@@ -9,7 +9,7 @@ export default function Navbar() {
           href="/"
           className="text-lg font-semibold tracking-[0.2em] uppercase text-white"
         >
-          From London to Paris
+          From London to Paris LLC.
         </Link>
 
         {/* Navigation */}

@@ -22,7 +22,7 @@ export default function Navbar() {
             </span>
 
             <span className="block md:hidden">
-              From London to Paris
+              FLTP
             </span>
           </Link>
 

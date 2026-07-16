@@ -11,7 +11,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       <Build />
-      <Projects />
+      {/* <Projects /> */}
       <WhyFLTP />
       <Footer />
     </main>

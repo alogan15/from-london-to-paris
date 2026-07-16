@@ -34,11 +34,22 @@ const projects = [
     tech: ["Next.js", "React", "Tailwind"],
     reverse: true,
   },
+    {
+    title: "Drama Club",
+    description:
+      "A premium fashion website designed to elevate the Drama Club brand through modern design, immersive visuals, and a seamless shopping experience.",
+    image: "/projects/drama-club.jpg",
+    tech: ["Next.js", "Shopify", "Tailwind", "E-Commerce"],
+    reverse: false,
+  },
 ];
 
 export default function Projects() {
   return (
-    <section className="bg-black px-6 py-28 text-white">
+    <section
+      id="projects"
+      className="bg-black px-6 py-28 text-white"
+    >
       <div className="mx-auto max-w-7xl">
 
         {/* Section Header */}

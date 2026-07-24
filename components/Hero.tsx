@@ -27,6 +27,11 @@ export default function Hero() {
           entrepreneurs, organizations, and creators turn ideas into reality.
         </p>
 
+        {/* Signature Line */}
+        <p className="mt-10 text-sm uppercase tracking-[0.35em] text-[#D4AF37]">
+          Building software solutions for small businesses
+        </p>
+
         {/* Buttons */}
         <div className="mt-12 flex flex-col gap-5 sm:flex-row">
 

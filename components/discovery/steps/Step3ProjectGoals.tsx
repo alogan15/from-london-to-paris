@@ -16,6 +16,7 @@ const goals = [
   "Membership Area",
   "Mobile App",
   "Customer Dashboard",
+  "Other (Custom)",
 ];
 
 export default function Step3ProjectGoals({
@@ -58,12 +59,30 @@ export default function Step3ProjectGoals({
                   ✓
                 </span>
               )}
-
             </div>
-          </button>
-        ))}
+          </button>      
+        ))}        
+        {formData.projectGoals.includes("Other (Custom)") && (
+          <div className="mt-8">
+            <label className="mb-2 block text-sm font-semibold uppercase tracking-wider text-gray-300">
+              Tell us about your project goal
+            </label>
 
-      </div>
-    </div>
+            <input
+              type="text"
+              value={formData.otherGoal}
+              onChange={(e) =>
+                setFormData({
+                  ...formData,
+                  otherGoal: e.target.value,
+                })
+              }
+              placeholder="Example: Build an internal employee portal, launch an online course, create a client portal..."
+              className="w-full rounded-xl border border-white/10 bg-white/5 px-5 py-4 text-white placeholder:text-gray-500 focus:border-[#D4AF37] focus:outline-none"
+            />
+          </div>
+        )}
+      </div>     
+    </div>   
   );
 }

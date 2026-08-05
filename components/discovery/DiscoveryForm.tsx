@@ -25,6 +25,8 @@ const [formData, setFormData] = useState({
   projectGoals: [] as string[],
 
   websiteFeatures: [] as string[],
+
+  otherFeature: "",
 });
   return (
     <div className="mx-auto max-w-5xl">

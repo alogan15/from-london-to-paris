@@ -16,6 +16,7 @@
 - [x] Responsive mobile layout
 
 ## Homepage
+- [x] Hero section
 - [x] "What We Build" section
 - [x] Why FLTP section
 - [x] Footer
@@ -30,21 +31,51 @@
 - [x] StopLee Golf Club
 - [x] Drama Club
 
-## Improvements
-- [x] Replaced placeholder project cards with real screenshots
-- [x] Fixed mobile animation issue
-- [x] Added brand statement:
+## Services
+- [x] Dedicated Services page
+- [x] Alternating service layout
+- [x] Service numbering (01–05)
+- [x] Custom service quotes
+- [x] Individual service CTAs
+- [x] Website Care Plans section
+- [x] Transparent pricing section
+- [x] Removed duplicate final CTA
 
-> Building software solutions for small businesses
+## Discovery Platform
+- [x] Discovery landing page
+- [x] Multi-step Discovery Form
+- [x] Progress indicator
+- [x] Dynamic step headers
+- [x] Shared form state
+- [x] Previous / Next navigation
+- [x] Step 1 – Business Information
+- [x] Step 2 – About Your Business
+- [x] Step 3 – Project Goals
+- [x] Step 4 – Website Features
+- [x] Connected "Start Your Project" buttons to Discovery
+
+## Improvements
+- [x] Reorganized project folder structure
+- [x] Modular component architecture
+- [x] Shared discovery components
+- [x] Cleaner Services component organization
+- [x] Updated pricing messaging
+- [x] Improved CTA flow
 
 ---
 
 # 🚧 In Progress
 
-## Homepage
-- [ ] Refine Hero copy
-- [ ] Improve CTA section
-- [ ] Decide if Why FLTP stays on homepage or moves to About page
+## Discovery Platform
+- [ ] Step 5 – Design Preferences
+- [ ] Step 6 – Content Assets
+- [ ] Step 7 – Domain & Hosting
+- [ ] Step 8 – Timeline & Budget
+- [ ] Review & Submit screen
+- [ ] Form validation
+- [ ] Save submissions to Supabase
+- [ ] Email notifications
+- [ ] Admin Dashboard
 
 ## Projects
 - [ ] Add hover animations
@@ -53,73 +84,48 @@
 - [ ] Add GitHub links where appropriate
 
 ## Navigation
-- [ ] Finish mobile navigation
-- [ ] Smooth scrolling
+- [ ] Improve mobile navigation
 - [ ] Active page highlighting
 
 ---
 
 # 📋 Upcoming Features
 
-## Website Care Plans ⭐
+## Discovery Platform ⭐
 
-Create a recurring revenue section explaining why websites require ongoing maintenance.
+Turn every project inquiry into a guided client experience.
 
-### Launch Package
-- Custom Website
-- Mobile Responsive
-- Contact Forms
-- SEO Basics
-- Training Session
-
-### Hosting
-$20/month
-
-Includes:
-- Secure Hosting
-- Server Costs
-- SSL
-- Database
-- Backups
-
-### Website Care Plan
-Starting at $75/month
-
-Includes:
-- Content Updates
-- Bug Fixes
-- Performance Optimization
-- Security Monitoring
-- Dependency Updates
-- Monthly Backups
-- Priority Support
-
-Future tiers:
-
-- Essential Care
-- Growth Care
-- VIP Care
+- Multi-step questionnaire
+- Supabase integration
+- Client database
+- Admin dashboard
+- Project summaries
+- Proposal generation
+- CRM foundation
 
 ---
 
 ## Proposal Generator
 
-Every proposal should automatically include:
+Automatically generate professional proposals including:
 
-- Website Price
+- Website Development
 - Hosting
 - Website Care Plan
 - Domain
 - Deposit Schedule
 - Estimated Timeline
+- Project Scope
+- Terms & Conditions
 
 ---
 
 ## New Pages
 
+- [x] Services
+- [x] Discovery
 - [ ] About
-- [ ] Services
-- [ ] Website Care Plans
+- [ ] Pricing
 - [ ] Process
 - [ ] Contact
 - [ ] FAQ
@@ -156,34 +162,31 @@ Every proposal should automatically include:
 
 - 10 website clients
 - 10 Website Care Plan subscriptions
-- Launch FLTP templates
-- Launch FLTP component library
-- Launch FLTP SaaS products
+- Launch FLTP Templates
+- Launch FLTP Component Library
+- Launch FLTP SaaS Products
+- Build the FLTP Client Portal
 - Become a full-service digital agency
 
 ---
 
-# Monthly Recurring Revenue Goal
+# 💰 Monthly Recurring Revenue Goal
 
 Website Care Plans
 
-10 clients × $75 = $750/month
+- 10 clients × $75 = **$750/month**
+- 20 clients × $75 = **$1,500/month**
+- 30 clients × $75 = **$2,250/month**
+- 50 clients × $75 = **$3,750/month**
+- 100 clients × $75 = **$7,500/month**
 
-20 clients × $75 = $1,500/month
+### Goal
 
-30 clients × $75 = $2,250/month
-
-50 clients × $75 = $3,750/month
-
-100 clients × $75 = $7,500/month
-
-Goal:
-
-Build predictable recurring revenue instead of relying only on one-time website sales.
+Build predictable recurring revenue instead of relying solely on one-time website sales.
 
 ---
 
-# Notes
+# 📝 Notes
 
 Every website proposal should include:
 
@@ -192,7 +195,37 @@ Every website proposal should include:
 - Website Care Plan
 - Domain (if needed)
 - Deposit Schedule
+- Estimated Timeline
 
-Never sell "just a website."
+> Never sell "just a website." Sell a long-term digital partnership.
 
-Sell an ongoing digital partnership.
+---
+
+# 📖 Changelog
+
+## v1.2.0 – Discovery Platform Foundation
+
+### Added
+- Dedicated Services page
+- Website Care Plans section
+- Transparent pricing section
+- Discovery landing page
+- Multi-step Discovery Form
+- Dynamic progress tracking
+- Shared form state
+- Steps 1–4 of the Discovery workflow
+- Modular discovery architecture
+
+### Improved
+- Project folder organization
+- Component architecture
+- CTA flow now routes clients into the Discovery experience
+- Services page hierarchy and messaging
+- Consultation-first pricing strategy
+
+### Next Release (v1.3.0)
+- Complete Discovery Steps 5–8
+- Connect Discovery Form to Supabase
+- Store client inquiries in database
+- Build Admin Dashboard
+- Generate proposals automatically

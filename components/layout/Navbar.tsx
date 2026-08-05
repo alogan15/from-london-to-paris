@@ -35,7 +35,7 @@ export default function Navbar() {
               Home
             </Link>
 
-            <Link href="/portfolio" className="text-sm text-gray-300 hover:text-white">
+            <Link href="/projects" className="text-sm text-gray-300 hover:text-white">
               Work
             </Link>
 

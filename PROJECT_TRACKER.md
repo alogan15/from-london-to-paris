@@ -96,6 +96,22 @@
 
 # 📋 Upcoming Features
 
+## UI / UX Improvements
+
+- [ ] Replace "Start Project" navbar button with a premium **Get Started ▼** dropdown
+
+  Dropdown options:
+  - 💼 Start a Project → /discovery
+  - 💻 Join Coding Camp → /young-creators
+  - 📅 Book a Consultation → /discovery (temporary, replace with booking system later)
+
+  Features:
+  - Luxury dropdown design
+  - Gold hover animations
+  - Keyboard accessible
+  - Mobile-friendly expandable menu
+  - Reusable dropdown component
+
 ## Client Management Platform ⭐
 
 Turn every website inquiry into a complete client management system.

@@ -8,7 +8,7 @@ const services = [
   title: "Website Development",
   description:
     "Your website is more than an online brochure—it's often the first impression customers have of your business. We create modern, high-performing websites that build trust, generate leads, and help your business grow.",
-  image: "/services/website-development.jpg",
+  image: "/services/website-design.jpg",
   features: [
     "Custom Design",
     "Mobile Responsive",
@@ -24,7 +24,7 @@ const services = [
   title: "Web Applications",
   description:
     "Every business is different. We create custom web applications that simplify operations, improve efficiency, and help your team work smarter.",
-  image: "/services/web-applications.jpg",
+  image: "/services/custom-software.jpg",
   features: [
     "Dashboards",
     "Client Portals",
@@ -40,7 +40,7 @@ const services = [
   title: "AI Solutions",
   description:
     "Artificial intelligence can save time, reduce repetitive work, and improve customer experiences. We build practical AI tools that deliver real business value.",
-  image: "/services/ai-solutions.jpg",
+  image: "/services/ai-integ.png",
   features: [
     "AI Chatbots",
     "Business Automation",
@@ -56,7 +56,7 @@ const services = [
   title: "QR Experiences",
   description:
     "Transform printed materials into interactive digital experiences that engage customers, share information, and create memorable moments.",
-  image: "/services/qr-experiences.jpg",
+  image: "/services/qr-exp.png",
   features: [
     "Music Experiences",
     "Restaurant Menus",
@@ -72,7 +72,7 @@ const services = [
   title: "Coding Education",
   description:
     "We believe technology changes lives. Through hands-on instruction and real-world projects, we help students build confidence and valuable coding skills.",
-  image: "/services/coding-education.jpg",
+  image: "/services/code-educ.png",
   features: [
     "Coding Camps",
     "Mentorship",

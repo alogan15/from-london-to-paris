@@ -27,7 +27,7 @@ export default function Footer() {
             GitHub
           </Link>
 
-          <Link href="/contact" className="transition hover:text-white">
+          <Link href="/discovery" className="transition hover:text-white">
             Contact Us
           </Link>
         </div>

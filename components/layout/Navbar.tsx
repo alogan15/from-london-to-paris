@@ -44,12 +44,12 @@ export default function Navbar() {
               Young Creators
             </Link>
 
-            <Link href="/contact" className="text-sm text-gray-300 hover:text-white">
+            <Link href="/discovery" className="text-sm text-gray-300 hover:text-white">
               Contact
             </Link>
 
             <Link
-              href="/contact"
+              href="/discovery"
               className="rounded-full border border-[#D4AF37] px-6 py-3 text-sm font-semibold text-[#D4AF37] transition hover:bg-[#D4AF37] hover:text-black"
             >
               Start Project
@@ -115,7 +115,7 @@ export default function Navbar() {
           ))}
 
           <Link
-            href="/contact"
+            href="/discovery"
             onClick={() => setOpen(false)}
             className="mt-10 rounded-full border border-[#D4AF37] py-4 text-center font-semibold text-[#D4AF37] transition hover:bg-[#D4AF37] hover:text-black"
           >

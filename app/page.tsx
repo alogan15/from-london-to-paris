@@ -1,8 +1,8 @@
-import Navbar from "@/components/Navbar";
-import Hero from "@/components/Hero";
-import Footer from "@/components/Footer";
+import Navbar from "@/components/layout/Navbar";
+import Hero from "@/components/home/Hero";
+import Footer from "@/components/layout/Footer";
 import { Build } from "@/components/index";
-import WhyFLTP from "@/components/WhyFLTP";
+import WhyFLTP from "@/components/home/WhyFLTP";
 
 export default function Home() {
   return (

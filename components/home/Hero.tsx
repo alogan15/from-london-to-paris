@@ -43,7 +43,7 @@ export default function Hero() {
           </Link>
 
           <Link
-            href="/contact"
+            href="/discovery"
             className="rounded-full border border-white px-10 py-4 font-semibold text-white transition duration-300 hover:bg-white hover:text-black"
           >
             Start Project

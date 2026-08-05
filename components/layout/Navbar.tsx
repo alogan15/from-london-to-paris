@@ -10,12 +10,12 @@ export default function Navbar() {
   return (
     <>
       <header className="fixed top-0 left-0 z-50 w-full border-b border-white/10 bg-black/80 backdrop-blur-md">
-        <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6">
+        <div className="mx-auto flex h-20 max-w-[1400px] items-center justify-between px-6">
 
           {/* Logo */}
           <Link
             href="/"
-            className="text-lg font-semibold uppercase tracking-[0.25em] text-white"
+            className="text-xl font-bold tracking-[0.35em] text-white"
           >
             <span className="hidden md:block">
               From London to Paris
@@ -24,10 +24,13 @@ export default function Navbar() {
             <span className="block md:hidden">
               FLTP
             </span>
+            <p className="mt-1 text-[10px] uppercase tracking-[0.45em] text-[#D4AF37]/80">
+              Learn • Build • Launch
+            </p>
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden items-center gap-8 md:flex">
+          <nav className="hidden items-center gap-10 md:flex">
             <Link href="/" className="text-sm text-gray-300 hover:text-white">
               Home
             </Link>

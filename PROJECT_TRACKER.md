@@ -1,222 +1,302 @@
 # From London to Paris
-## Project Tracker
+# Project Tracker
 
-> Building software solutions for small businesses.
+> Learn • Build • Launch
+> Building software solutions, automation, and coding education.
 
 ---
 
-# ✅ Completed
+# 🚀 Version 1.0 Status
 
-## Branding
-- [x] FLTP logo and navigation
-- [x] Dark luxury theme
-- [x] Gold accent color
-- [x] Hero section redesign
-- [x] Animated rotating words
-- [x] Responsive mobile layout
+## ✅ Marketing Website
+
+### Branding
+- [x] FLTP logo
+- [x] Luxury black & gold theme
+- [x] Responsive navigation
+- [x] Desktop Get Started dropdown
+- [x] Mobile navigation redesign
+- [x] Mobile Get Started expandable menu
+- [x] Footer redesign
+- [x] Social media links
+- [x] Contact information
+
+---
 
 ## Homepage
-- [x] Hero section
-- [x] "What We Build" section
-- [x] Why FLTP section
-- [x] Footer
-- [x] CTA buttons
-- [x] View Our Work button scrolls to Projects
 
-## Projects
-- [x] Dedicated Projects page
-- [x] Young Creators
-- [x] Pay Homage
-- [x] Sociable Travels
-- [x] StopLee Golf Club
-- [x] Drama Club
+- [x] Hero
+- [x] Animated rotating words
+- [x] What We Build
+- [x] Why FLTP
+- [x] Services Preview
+- [x] Projects Preview
+- [x] Final CTA
+- [x] Footer
+
+---
 
 ## Services
+
 - [x] Dedicated Services page
-- [x] Alternating service layout
-- [x] Service numbering (01–05)
-- [x] Custom service quotes
-- [x] Individual service CTAs
-- [x] Website Care Plans section
-- [x] Transparent pricing section
-- [x] Removed duplicate CTA section
+- [x] Website Development
+- [x] Business Automation
+- [x] AI Integrations
+- [x] QR Experiences
+- [x] Coding Education
+- [x] Website Care Plans
+- [x] Transparent Pricing
+- [x] Individual CTAs
+
+---
+
+## Work
+
+- [x] Dedicated Work page
+
+Projects
+
+- [x] Young Creators
+- [x] Sociable Travels
+- [x] StopLee Golf Club
+- [x] Pay Homage
+- [x] Drama Club
+
+---
+
+## Young Creators
+
+Landing Page
+
+- [x] Hero
+- [x] Why Young Creators
+- [x] Meet the Instructor
+- [x] Camp Details
+- [x] Learning by Building
+- [x] Final CTA
+
+Enrollment
+
+- [x] Custom Enrollment Page
+- [x] Parent Information
+- [x] Student Information
+- [x] Add Child support
+- [x] Tuition Selection
+- [x] Parent Notes
+- [x] Agreements
+- [x] Submit section
+
+---
 
 ## Discovery Platform
-- [x] Discovery landing page
+
+- [x] Landing page
 - [x] Multi-step Discovery Form
 - [x] Progress indicator
-- [x] Dynamic step headers
-- [x] Shared form state
-- [x] Previous / Next navigation
-- [x] Step 1 – Business Information
-- [x] Step 2 – About Your Business
-- [x] Step 3 – Project Goals
-- [x] Step 4 – Website Features
-- [x] Step 5 – Design Preferences
-- [x] Step 6 – Content & Brand Assets
-- [x] Step 7 – Domain & Hosting
-- [x] Step 8 – Review & Submit
-- [x] Discovery review screen
-- [x] Connected "Start Your Project" buttons to Discovery
-
-## Improvements
-- [x] Reorganized project folder structure
-- [x] Modular component architecture
-- [x] Shared discovery components
-- [x] Cleaner Services component organization
-- [x] Updated pricing messaging
-- [x] Improved CTA flow
-- [x] Consistent UI across all discovery steps
+- [x] Shared state
+- [x] Review page
+- [x] Connected throughout website
 
 ---
 
-# 🚧 In Progress
+## Consultation
 
-## Discovery Platform
-- [ ] Connect Discovery Form to Supabase
-- [ ] Save client submissions
-- [ ] Success / Thank You page
-- [ ] Form validation
+- [x] Consultation landing page
+- [x] Hero
+- [x] Basic Information
+- [x] Project Details
+- [x] Services Interested
+- [x] Budget & Timeline
+- [x] Contact Method
+- [x] Submit Section
+- [x] FAQ
+
+---
+
+# 🚧 Version 2.0
+
+## Backend
+
+### Discovery
+
+- [ ] Connect to Supabase
+- [ ] Save submissions
+- [ ] Success page
 - [ ] Email notifications
-- [ ] Admin Dashboard
-- [ ] Client status workflow
-
-## Proposal System
-- [ ] Generate proposal from discovery responses
-- [ ] Export PDF
-- [ ] Client approval workflow
-
-## Projects
-- [ ] Add hover animations
-- [ ] Add project detail pages
-- [ ] Add live demo links
-- [ ] Add GitHub links
+- [ ] Validation
 
 ---
 
-# 📋 Upcoming Features
+### Consultation
 
-## UI / UX Improvements
+- [ ] Connect to Supabase
+- [ ] Save submissions
+- [ ] Email notifications
+- [ ] Success page
+- [ ] Validation
 
-- [ ] Replace "Start Project" navbar button with a premium **Get Started ▼** dropdown
+---
 
-  Dropdown options:
-  - 💼 Start a Project → /discovery
-  - 💻 Join Coding Camp → /young-creators
-  - 📅 Book a Consultation → /discovery (temporary, replace with booking system later)
+### Young Creators
 
-  Features:
-  - Luxury dropdown design
-  - Gold hover animations
-  - Keyboard accessible
-  - Mobile-friendly expandable menu
-  - Reusable dropdown component
+- [ ] Connect Enrollment
+- [ ] Save registrations
+- [ ] Parent confirmation email
+- [ ] Admin notification
+- [ ] Success page
 
-## Client Management Platform ⭐
+---
 
-Turn every website inquiry into a complete client management system.
+## Admin Platform ⭐
 
-- Discovery Form
-- Supabase Database
-- Admin Dashboard
-- Proposal Generator
-- Client Portal
-- Project Tracker
-- Invoice System
-- Contract Signing
+Dashboard
+
+- [ ] Overview
+- [ ] New Leads
+- [ ] Active Projects
+- [ ] Camp Registrations
+- [ ] Messages
+
+---
+
+Leads
+
+- [ ] Discovery Leads
+- [ ] Consultation Leads
+- [ ] Search
+- [ ] Filters
+- [ ] Status tracking
+
+---
+
+Young Creators
+
+- [ ] Registration Dashboard
+- [ ] Student Roster
+- [ ] Parent Contact List
+- [ ] Tuition Status
+
+---
+
+Projects
+
+- [ ] Client List
+- [ ] Progress Tracking
+- [ ] Notes
+- [ ] Deliverables
 
 ---
 
 ## Proposal Generator
 
-Automatically generate professional proposals including:
-
-- Website Development
-- Hosting
-- Website Care Plan
-- Domain
-- Deposit Schedule
-- Estimated Timeline
-- Project Scope
-- Terms & Conditions
+- [ ] Generate Proposal
+- [ ] PDF Export
+- [ ] Client Approval
+- [ ] Digital Signature
+- [ ] Email Proposal
 
 ---
 
-## New Pages
+## Client Portal
 
-- [x] Services
-- [x] Discovery
-- [ ] About
-- [ ] Pricing
-- [ ] Process
-- [ ] Contact
-- [ ] FAQ
-
----
-
-## Future Services
-
-- AI Integrations
-- QR Experiences
-- Business Automation
-- Web Applications
-- Coding Education
-- Portfolio Websites
-- E-commerce
-- Landing Pages
+- [ ] Login
+- [ ] View Proposal
+- [ ] View Invoice
+- [ ] Upload Files
+- [ ] Project Status
+- [ ] Messages
 
 ---
 
-# 💡 Ideas
+## Billing
 
-- Client Dashboard
-- Client Portal
-- Online Proposal System
-- Online Invoice System
-- Online Contract Signing
-- Website Health Checker
-- ROI Calculator
-- Before / After Website Showcase
+- [ ] Invoices
+- [ ] Deposits
+- [ ] Payment Tracking
+- [ ] Website Care Plans
 
 ---
 
-# 🎯 Long-Term Goals
+# 🎯 UI Improvements
 
-- 10 Website Clients
-- 10 Website Care Plan Clients
-- Launch FLTP Templates
-- Launch FLTP Component Library
-- Launch FLTP SaaS Products
-- Build the FLTP Client Platform
-- Become a full-service digital agency
-
----
-
-# 💰 Monthly Recurring Revenue Goal
-
-Website Care Plans
-
-- 10 clients × $75 = **$750/month**
-- 20 clients × $75 = **$1,500/month**
-- 30 clients × $75 = **$2,250/month**
-- 50 clients × $75 = **$3,750/month**
-- 100 clients × $75 = **$7,500/month**
-
-### Goal
-
-Build predictable recurring revenue instead of relying solely on one-time website sales.
+- [ ] Mobile responsiveness review
+- [ ] Accessibility audit
+- [ ] Loading states
+- [ ] Skeleton screens
+- [ ] Better form validation
+- [ ] Animations
+- [ ] Micro interactions
 
 ---
 
-# 📝 Notes
+# 🌟 Future Products
 
-Every proposal should include:
+## Launch Kits
 
-- Website Development
-- Hosting
-- Website Care Plan
-- Domain (if needed)
-- Deposit Schedule
-- Estimated Timeline
+- [ ] Starter Website Kit
+- [ ] Restaurant Kit
+- [ ] Realtor Kit
+- [ ] Coach Kit
+- [ ] Creator Kit
 
-> Never sell "just a website." Sell a long-term digital partnership.
+---
+
+## SaaS
+
+- [ ] FLTP Client Platform
+- [ ] Proposal Builder
+- [ ] Website Health Checker
+- [ ] ROI Calculator
+- [ ] QR Platform
+
+---
+
+## Coding Education
+
+- [ ] Student Dashboard
+- [ ] Homework Portal
+- [ ] Certificates
+- [ ] Instructor Dashboard
+- [ ] Parent Portal
+
+---
+
+# 💰 Business Goals
+
+## Revenue
+
+- [ ] First $1,000 Month
+- [ ] First $5,000 Month
+- [ ] First $10,000 Month
+
+---
+
+## Website Care Plans
+
+- [ ] 10 Clients
+- [ ] 25 Clients
+- [ ] 50 Clients
+- [ ] 100 Clients
+
+---
+
+## Young Creators
+
+- [ ] Launch First Cohort
+- [ ] Fill 10 Seats
+- [ ] Collect Testimonials
+- [ ] Launch Cohort #2
+
+---
+
+# 💡 Philosophy
+
+> Don't just build websites.
+
+Build systems.
+
+Build relationships.
+
+Build recurring revenue.
+
+Build software that businesses depend on.

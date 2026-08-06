@@ -22,7 +22,6 @@ export default function Footer() {
               We build software solutions for small businesses, organizations, and creators. Our mission is to help you transform your ideas into modern digital experiences that drive growth and success.
             </p>
 
-
           </div>
 
           {/* Navigation */}
@@ -46,36 +45,67 @@ export default function Footer() {
                 Work
               </Link>
 
-              <Link href="/discovery" className="block hover:text-white">
-                Discovery
-              </Link>
-
               <Link href="/young-creators" className="block hover:text-white">
                 Young Creators
+              </Link>
+
+              <Link href="/discovery" className="block hover:text-white">
+                Start a Project
               </Link>
 
             </div>
 
           </div>
 
-          {/* Services */}
+          {/* Contact */}
           <div>
 
             <h3 className="mb-6 text-sm font-semibold uppercase tracking-[0.3em] text-white">
-              Services
+              Connect
             </h3>
 
             <div className="space-y-4 text-gray-400">
 
-              <p>Website Design</p>
+              <a
+                href="mailto:fltp8125@gmail.com"
+                className="block hover:text-white"
+              >
+                📧 fltp8125@gmail.com
+              </a>
 
-              <p>Custom Software</p>
+              <a
+                href="tel:+12675812282"
+                className="block hover:text-white"
+              >
+                📱 (267) 581-2282
+              </a>
 
-              <p>Business Automation</p>
+              <a
+                href="https://www.instagram.com/dre.logan/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block hover:text-white"
+              >
+                Instagram
+              </a>
 
-              <p>Website Care Plans</p>
+              <a
+                href="https://www.linkedin.com/in/andre-logan/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block hover:text-white"
+              >
+                LinkedIn
+              </a>
 
-              <p>Discovery & Strategy</p>
+              <a
+                href="https://github.com/alogan15"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block hover:text-white"
+              >
+                GitHub
+              </a>
 
             </div>
 
@@ -89,27 +119,15 @@ export default function Footer() {
 
         {/* Bottom */}
 
-        <div className="flex flex-col items-center justify-between gap-8 md:flex-row">
+        <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
 
           <p className="text-sm text-gray-500">
-            © {new Date().getFullYear()} From London to Paris. All rights reserved.
+            © {new Date().getFullYear()} From London to Paris LLC. All rights reserved.
           </p>
 
-          <div className="flex gap-8 text-sm text-gray-400">
-
-            <Link href="/" className="hover:text-white">
-              Instagram
-            </Link>
-
-            <Link href="/" className="hover:text-white">
-              LinkedIn
-            </Link>
-
-            <Link href="/" className="hover:text-white">
-              GitHub
-            </Link>
-
-          </div>
+          <p className="text-sm text-gray-500">
+            Serving clients remotely across the United States.
+          </p>
 
         </div>
 

@@ -4,6 +4,70 @@ All notable changes to From London to Paris.
 
 ---
 
+# v2.0.0 — Platform Expansion
+
+## 🚀 Added
+
+### Young Creators
+- Complete Young Creators landing page
+- Hero section
+- Why Young Creators section
+- Meet the Instructor section
+- Camp Details section
+- Learning by Building section
+- Final CTA section
+
+### Enrollment Platform
+- Custom multi-section enrollment experience
+- Parent Information
+- Student Information
+- Multi-student registration ("Add Child")
+- Tuition selection
+- Parent Notes
+- Agreements & Permissions
+- Registration submit page
+
+### Consultation Platform
+- Dedicated Consultation landing page
+- Hero section
+- Client Information
+- Project Details
+- Services Interested
+- Budget & Timeline
+- Preferred Contact Method
+- FAQ section
+- Consultation submission workflow
+
+### Navigation
+- Premium Get Started desktop dropdown
+- Mobile expandable Get Started menu
+- Dedicated Consultation page
+- Updated CTA routing across the website
+- Social media integration
+- Contact information in footer
+
+## ✨ Improved
+
+- Mobile navigation experience
+- Responsive navigation across desktop and mobile
+- CTA flow throughout the website
+- User journey from homepage to conversion
+- Footer organization
+- Navigation consistency
+- Overall site architecture
+
+## 🎯 Next Release — v2.1.0
+
+- Connect Discovery to Supabase
+- Connect Consultation to Supabase
+- Connect Camp Enrollment to Supabase
+- Email notifications
+- Success / Thank You pages
+- Form validation
+- Admin Dashboard
+
+---
+
 # v1.3.0 — Discovery Platform Complete
 
 ## 🚀 Added
@@ -27,15 +91,6 @@ All notable changes to From London to Paris.
 - Client onboarding experience
 - Discovery workflow organization
 
-## 🎯 Next Release — v1.4.0
-
-- Connect Discovery Form to Supabase
-- Save client submissions
-- Success page
-- Admin Dashboard
-- Client Management System
-- Proposal Generator
-
 ---
 
 # v1.2.0 — Discovery Platform Foundation
@@ -57,7 +112,7 @@ All notable changes to From London to Paris.
 - Project folder organization
 - Component architecture
 - CTA flow routes clients into the Discovery experience
-- Services page hierarchy and messaging
+- Services page hierarchy
 - Consultation-first pricing strategy
 
 ---
@@ -66,17 +121,17 @@ All notable changes to From London to Paris.
 
 ## 🚀 Added
 
-- Dedicated Projects page
-- Real project screenshots
-- Brand statement
-- Animated hero
-- Additional portfolio projects
+- Dedicated Work page
+- Real project showcase
+- Animated homepage
+- Expanded portfolio
+- Improved navigation
 
 ## ✨ Improved
 
 - Homepage messaging
 - Mobile responsiveness
-- Project navigation
+- Portfolio presentation
 
 ---
 

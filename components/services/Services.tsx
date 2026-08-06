@@ -214,7 +214,7 @@ export default function Services() {
       </p>
 
       <Link
-        href="/discovery"
+        href="/consultation"
         className="mt-12 inline-flex rounded-full bg-[#D4AF37] px-10 py-5 text-lg font-semibold text-black transition duration-300 hover:scale-105"
       >
         Schedule a Free Consultation

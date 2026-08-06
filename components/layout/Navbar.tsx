@@ -69,7 +69,7 @@ useEffect(() => {
               Young Creators
             </Link>
 
-            <Link href="/discovery" className="text-sm text-gray-300 hover:text-white">
+            <Link href="/contact" className="text-sm text-gray-300 hover:text-white">
               Contact
             </Link>
 

@@ -139,20 +139,22 @@ export default function FeaturedProject({
         {/* Buttons */}
 
         <div className="mt-12 flex flex-wrap gap-4">
-
+            {project.demo && (
           <Link
             href={project.demo}
+            target="_blank"
+            rel="noopener noreferrer"
             className="rounded-full bg-[#D4AF37] px-8 py-4 font-semibold text-black transition hover:scale-105"
           >
-            Live Demo
+            View Website
           </Link>
-
-          <Link
+        )}
+          {/* <Link
             href={project.github}
             className="rounded-full border border-white/20 px-8 py-4 transition hover:border-[#D4AF37] hover:text-[#D4AF37]"
           >
             View Project
-          </Link>
+          </Link> */}
 
         </div>
 

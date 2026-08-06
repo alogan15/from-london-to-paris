@@ -54,13 +54,13 @@ export default function Hero() {
       </div>
 
       {/* Divider */}
-      <div className="mx-auto mt-12 max-w-6xl border-t border-white/10 pt-10">
+      {/* <div className="mx-auto mt-12 max-w-6xl border-t border-white/10 pt-10">
 
         <p className="text-center text-sm uppercase tracking-[0.45em] text-gray-500">
           Learn • Build • Launch
         </p>
 
-      </div>
+      </div> */}
     </section>
   );
 }

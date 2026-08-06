@@ -7,7 +7,7 @@ export const projects = [
     year: "2026",
     status: "Completed",
 
-    image: "/projects/sociable-travels.jpg",
+    image: "/projects/sociable-travel.jpg",
 
     problem:
       "The client needed a modern website that reflected their luxury brand while making it easy for travelers to explore destinations, build trust, and inquire about trips.",
@@ -47,7 +47,7 @@ export const projects = [
       "Vercel",
     ],
 
-    demo: "#",
+    demo: "https://www.sociabletravels.com",
     github: "#",
   },
 
@@ -58,7 +58,7 @@ export const projects = [
     year: "2026",
     status: "Active Development",
 
-    image: "/projects/stoplee.jpg",
+    image: "/projects/stopleegc.jpg",
 
     problem:
       "League standings, statistics, and season tracking were being managed manually, making it difficult to keep players informed throughout the season.",
@@ -85,7 +85,6 @@ export const projects = [
       "Leaderboards",
       "Statistics",
       "Flight Standings",
-      "Player Profiles",
       "Admin Tools",
     ],
 
@@ -96,7 +95,7 @@ export const projects = [
       "Supabase",
     ],
 
-    demo: "#",
+    demo: "https://www.stopleegc.com",
     github: "#",
   },
 
@@ -107,7 +106,7 @@ export const projects = [
     year: "2026",
     status: "Completed",
 
-    image: "/projects/payhomage.jpg",
+    image: "/projects/pay-homage.jpg",
 
     problem:
       "Artists needed a better way to collect structured feedback during private listening events instead of relying on verbal comments.",
@@ -143,7 +142,7 @@ export const projects = [
       "Tailwind CSS",
     ],
 
-    demo: "#",
+    demo: "https://pay-homage.vercel.app/",
     github: "#",
   },
 
@@ -154,7 +153,7 @@ export const projects = [
     year: "2026",
     status: "In Development",
 
-    image: "/projects/youngcreators.jpg",
+    image: "/projects/young-creators.jpg",
 
     problem:
       "Students needed an engaging introduction to web development through hands-on, project-based learning instead of traditional lectures.",
@@ -193,47 +192,47 @@ export const projects = [
     github: "#",
   },
 
-  {
-    title: "Drama Club",
-    client: "School Organization",
-    category: "School Website",
-    year: "2026",
-    status: "Completed",
+  // {
+  //   title: "Drama Club",
+  //   client: "School Organization",
+  //   category: "School Website",
+  //   year: "2026",
+  //   status: "Completed",
 
-    image: "/projects/drama.jpg",
+  //   image: "/projects/drama.jpg",
 
-    problem:
-      "The drama club needed a modern website to showcase performances, communicate with students and families, and promote upcoming productions.",
+  //   problem:
+  //     "The drama club needed a modern website to showcase performances, communicate with students and families, and promote upcoming productions.",
 
-    solution:
-      "Designed and developed a responsive website featuring productions, events, galleries, and contact information.",
+  //   solution:
+  //     "Designed and developed a responsive website featuring productions, events, galleries, and contact information.",
 
-    services: [
-      "Website Design",
-      "Responsive Development",
-      "Content Organization",
-    ],
+  //   services: [
+  //     "Website Design",
+  //     "Responsive Development",
+  //     "Content Organization",
+  //   ],
 
-    results: [
-      "Professional Website",
-      "Mobile Optimized",
-      "Easy Navigation",
-      "Improved Communication",
-    ],
+  //   results: [
+  //     "Professional Website",
+  //     "Mobile Optimized",
+  //     "Easy Navigation",
+  //     "Improved Communication",
+  //   ],
 
-    deliverables: [
-      "Homepage",
-      "Gallery",
-      "Events",
-      "Contact",
-    ],
+  //   deliverables: [
+  //     "Homepage",
+  //     "Gallery",
+  //     "Events",
+  //     "Contact",
+  //   ],
 
-    stack: [
-      "Next.js",
-      "Tailwind CSS",
-    ],
+  //   stack: [
+  //     "Next.js",
+  //     "Tailwind CSS",
+  //   ],
 
-    demo: "#",
-    github: "#",
-  },
+  //   demo: "#",
+  //   github: "#",
+  // },
 ];

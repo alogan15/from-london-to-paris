@@ -228,7 +228,7 @@ export default function YoungCreatorsPage() {
     <div className="overflow-hidden rounded-3xl border border-white/10 bg-white/5">
 
       <img
-        src="/andre-logan.jpg"
+        src="/images/andrelogan.png"
         alt="Andrè Logan"
         className="h-full w-full object-cover"
       />

@@ -13,7 +13,7 @@ export const projects = [
       "The client needed a modern website that reflected their luxury brand while making it easy for travelers to explore destinations, build trust, and inquire about trips.",
 
     solution:
-      "Designed and developed a responsive marketing website featuring destination showcases, service highlights, testimonials, and a guided Discovery experience for prospective travelers.",
+      "Designed and developed a responsive marketing website featuring destination showcases, service highlights, testimonials, and a guided discovery experience for prospective travelers.",
 
     services: [
       "Website Design",

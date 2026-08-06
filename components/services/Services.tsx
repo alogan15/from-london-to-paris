@@ -107,9 +107,7 @@ export default function Services() {
       </p>
 
       <p className="mx-auto mt-8 max-w-3xl text-lg leading-8 text-gray-400">
-        From custom websites to AI-powered tools, we help businesses grow
-        through thoughtful design, modern technology, and software built
-        around their goals.
+        Whether you need a custom website or AI-powered tools, we design software that helps your business grow.
       </p>
 
       <Link
@@ -217,7 +215,7 @@ export default function Services() {
         href="/consultation"
         className="mt-12 inline-flex rounded-full bg-[#D4AF37] px-10 py-5 text-lg font-semibold text-black transition duration-300 hover:scale-105"
       >
-        Schedule a Free Consultation
+          Schedule a Free 30-Minute Consultation      
       </Link>
     </section>
   </main>

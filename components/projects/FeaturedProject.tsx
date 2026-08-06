@@ -73,7 +73,7 @@ export default function FeaturedProject({
         <div className="mt-10">
 
           <h3 className="text-xl font-semibold">
-            Problem
+            Challenge
           </h3>
 
           <p className="mt-3 leading-8 text-gray-400">

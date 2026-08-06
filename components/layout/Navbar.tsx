@@ -159,7 +159,7 @@ className={`fixed inset-0 z-50 overflow-y-auto bg-[#090909] transform transition
     </Link>
 
     <Link
-      href="/discovery"
+      href="/contact"
       onClick={() => setOpen(false)}
       className="border-b border-white/5 py-5 text-lg text-gray-300 transition hover:text-[#D4AF37]"
     >

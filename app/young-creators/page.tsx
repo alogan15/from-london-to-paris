@@ -1,45 +1,110 @@
 import Link from "next/link";
+import Curriculum from "@/components/young-creators/cirriculum/Curriculum";
+import Navbar from "@/components/young-creators/Navbar";
+import {
+  User,
+  Trophy,
+  Pizza,
+  Music,
+  BriefcaseBusiness,
+  Rocket,
+} from "lucide-react";
 
 export default function YoungCreatorsPage() {
+
+  const projects = [
+  {
+    icon: User,
+    title: "Personal Portfolio",
+    text: "Create a website that introduces yourself, your hobbies, and your accomplishments.",
+  },
+  {
+    icon: Trophy,
+    title: "Favorite Team Website",
+    text: "Design a modern fan page for your favorite sports team or athlete.",
+  },
+  {
+    icon: Pizza,
+    title: "Restaurant Website",
+    text: "Build a professional restaurant homepage complete with menus and contact information.",
+  },
+  {
+    icon: Music,
+    title: "Music Artist Page",
+    text: "Showcase your favorite artist or album with custom layouts and media sections.",
+  },
+  {
+    icon: BriefcaseBusiness,
+    title: "Business Landing Page",
+    text: "Learn how real businesses present their products and services online.",
+  },
+  {
+    icon: Rocket,
+    title: "Final Showcase Project",
+    text: "Combine everything you've learned into a polished website presented on Demo Day.",
+  },
+];
+
+
   return (
-    <main className="bg-black text-white">
+<main className="min-h-screen bg-gradient-to-br from-sky-50 via-white to-blue-50">
+  
+        <Navbar />
 
       {/* Hero */}
 
       <section className="mx-auto max-w-7xl px-6 py-32 text-center">
 
-        <p className="uppercase tracking-[0.4em] text-[#D4AF37]">
-          YOUNG CREATORS
+        <p className="uppercase tracking-[0.4em] text-slate-600">
+          🚀 Fall 2026 Enrollment Open
         </p>
 
-        <h1 className="mt-6 text-5xl font-bold leading-tight md:text-7xl">
+        <h1 className="text-7xl font-extrabold leading-tight text-slate-900">
           Build More Than
           <br />
-          Websites.
+          <span className="text-[#2563EB]">Websites.</span>
           <br />
           Build Confidence.
         </h1>
 
-        <p className="mx-auto mt-10 max-w-3xl text-xl leading-9 text-gray-400">
+        <p className="mx-auto mt-10 max-w-3xl text-xl leading-9 text-slate-600">
           Learn real web development through hands-on projects taught by an
           experienced software engineer. Students don't just learn to code—
           they create websites they're proud to share.
         </p>
 
-        <div className="mt-12 flex flex-col justify-center gap-6 sm:flex-row">
+        <div className="mt-10 flex flex-col justify-center gap-6 sm:flex-row">
 
           <Link
             href="/young-creators/enroll"
-            className="rounded-full bg-[#D4AF37] px-10 py-5 text-lg font-semibold text-black transition duration-300 hover:scale-105"
+            className="rounded-full bg-blue-600 px-10 py-5 text-lg font-semibold text-white transition duration-300 hover:scale-105"
           >
             Reserve Your Spot
           </Link>
 
           <Link
             href="#journey"
-            className="rounded-full border border-white/20 px-10 py-5 text-lg transition hover:border-[#D4AF37] hover:text-[#D4AF37]"
+              className="
+              inline-flex
+              items-center
+              justify-center
+              rounded-full
+              border-2
+              border-[#2563EB]
+              bg-white
+              px-8
+              py-4
+              font-semibold
+              text-[#2563EB]
+              shadow-sm
+              transition-all
+              duration-300
+              hover:-translate-y-0.5
+              hover:bg-[#EFF6FF]
+              hover:shadow-md
+              "
           >
-            Explore the Camp
+            Explore Curriculum →
           </Link>
 
         </div>
@@ -52,9 +117,9 @@ export default function YoungCreatorsPage() {
 
         <div className="text-center">
 
-          <p className="uppercase tracking-[0.4em] text-[#D4AF37]">
-            WHY YOUNG CREATORS
-          </p>
+
+        <Curriculum />
+
 
           {/* The Journey */}
 
@@ -65,24 +130,26 @@ export default function YoungCreatorsPage() {
 
             <div className="text-center">
 
-              <p className="uppercase tracking-[0.4em] text-[#D4AF37]">
+              <p className="uppercase tracking-[0.4em] text-slate-600">
                 THE JOURNEY
               </p>
 
-              <h2 className="mt-6 text-4xl font-bold md:text-6xl">
+              <h2 className="mt-6 text-4xl font-bold md:text-6xl text-slate-900">
                 Six Weeks.
+              </h2>
                 <br />
+              <h2 className="mt-6 text-4xl font-bold md:text-6xl text-[#2563EB]">
                 One Incredible Transformation.
               </h2>
 
-              <p className="mx-auto mt-8 max-w-3xl text-lg leading-8 text-gray-400">
+              <p className="mx-auto mt-8 max-w-3xl text-lg leading-8 text-slate-600">
                 Every week builds on the last. Students leave camp with practical
                 skills, confidence, and a real website they can proudly share.
               </p>
 
             </div>
 
-            <div className="mt-20 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            <div className="mt-20 grid gap-8 md:grid-cols-2 lg:grid-cols-3 text-slate-600">
 
               {[
                 {
@@ -118,9 +185,22 @@ export default function YoungCreatorsPage() {
               ].map((item) => (
                 <div
                   key={item.week}
-                  className="rounded-3xl border border-white/10 bg-white/5 p-8 transition duration-300 hover:border-[#D4AF37]/40 hover:bg-white/10"
-                >
-                  <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[#D4AF37]">
+                    className="
+                    group
+                    rounded-3xl
+                    border
+                    border-slate-200
+                    bg-white
+                    p-8
+                    shadow-sm
+                    transition-all
+                    duration-300
+                    hover:-translate-y-2
+                    hover:border-[#2563EB]
+                    hover:shadow-xl
+                    text-slate-900
+                    ">
+                  <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[#2563EB]">
                     {item.week}
                   </p>
 
@@ -128,7 +208,7 @@ export default function YoungCreatorsPage() {
                     {item.title}
                   </h3>
 
-                  <p className="mt-6 leading-8 text-gray-400">
+                  <p className="mt-6 leading-8 text-slate-600">
                     {item.text}
                   </p>
                 </div>
@@ -144,17 +224,19 @@ export default function YoungCreatorsPage() {
 
   <div className="text-center">
 
-    <p className="uppercase tracking-[0.4em] text-[#D4AF37]">
+    <p className="uppercase tracking-[0.4em] text-slate-600">
       WHAT STUDENTS BUILD
     </p>
 
-    <h2 className="mt-6 text-4xl font-bold md:text-6xl">
+    <h2 className="mt-6 text-4xl font-bold md:text-6xl text-slate-900">
       Real Projects.
+    </h2>
       <br />
+    <h2 className="text-4xl font-bold md:text-6xl text-[#2563EB]">
       Real Confidence.
     </h2>
 
-    <p className="mx-auto mt-8 max-w-3xl text-lg leading-8 text-gray-400">
+    <p className="mx-auto mt-8 max-w-3xl text-lg leading-8 text-slate-600">
       Students don't just complete lessons—they leave with projects they can
       proudly share with friends, family, and future schools.
     </p>
@@ -163,55 +245,77 @@ export default function YoungCreatorsPage() {
 
   <div className="mt-20 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
 
-    {[
-      {
-        emoji: "👤",
-        title: "Personal Portfolio",
-        text: "Create a website that introduces yourself, your hobbies, and your accomplishments.",
-      },
-      {
-        emoji: "🏀",
-        title: "Favorite Team Website",
-        text: "Design a modern fan page for your favorite sports team or athlete.",
-      },
-      {
-        emoji: "🍕",
-        title: "Restaurant Website",
-        text: "Build a professional restaurant homepage complete with menus and contact information.",
-      },
-      {
-        emoji: "🎵",
-        title: "Music Artist Page",
-        text: "Showcase your favorite artist or album with custom layouts and media sections.",
-      },
-      {
-        emoji: "💼",
-        title: "Business Landing Page",
-        text: "Learn how real businesses present their products and services online.",
-      },
-      {
-        emoji: "🚀",
-        title: "Final Showcase Project",
-        text: "Combine everything you've learned into a polished website presented on Demo Day.",
-      },
-    ].map((project) => (
-      <div
-        key={project.title}
-        className="rounded-3xl border border-white/10 bg-white/5 p-8 transition duration-300 hover:border-[#D4AF37]/40 hover:bg-white/10"
-      >
-        <div className="text-5xl">
-          {project.emoji}
-        </div>
+{[
+  {
+    emoji: "👤",
+    title: "Personal Portfolio",
+    text: "Create a website that introduces yourself, your hobbies, and your accomplishments.",
+  },
+  {
+    emoji: "🏀",
+    title: "Favorite Team Website",
+    text: "Design a modern fan page for your favorite sports team or athlete.",
+  },
+  {
+    emoji: "🍕",
+    title: "Restaurant Website",
+    text: "Build a professional restaurant homepage complete with menus and contact information.",
+  },
+  {
+    emoji: "🎵",
+    title: "Music Artist Page",
+    text: "Showcase your favorite artist or album with custom layouts and media sections.",
+  },
+  {
+    emoji: "💼",
+    title: "Business Landing Page",
+    text: "Learn how real businesses present their products and services online.",
+  },
+  {
+    emoji: "🚀",
+    title: "Final Showcase Project",
+    text: "Combine everything you've learned into a polished website presented on Demo Day.",
+  },
+].map((project) => (
+  <div
+    key={project.title}
+    className="
+      group
+      rounded-3xl
+      border-2
+      border-blue-100
+      bg-gradient-to-br
+      from-white
+      to-blue-50
+      p-8
+      shadow-lg
+      transition-all
+      duration-300
+      hover:-translate-y-2
+      hover:border-[#2563EB]
+      hover:shadow-2xl
+      hover:ring-4
+      hover:ring-blue-100
+    "
+  >
+    <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-[#2563EB] to-[#4F8CFF] text-3xl shadow-lg">
+      {project.emoji}
+    </div>
 
-        <h3 className="mt-6 text-2xl font-bold">
-          {project.title}
-        </h3>
+    <h3 className="mt-6 text-2xl font-bold text-slate-900 transition-colors group-hover:text-[#2563EB]">
+      {project.title}
+    </h3>
 
-        <p className="mt-6 leading-8 text-gray-400">
-          {project.text}
-        </p>
-      </div>
-    ))}
+    <p className="mt-4 leading-8 text-slate-600">
+      {project.text}
+    </p>
+
+    <div className="mt-8 flex items-center gap-2 font-semibold text-[#2563EB] opacity-0 transition-all duration-300 group-hover:opacity-100">
+      View Project
+      <span>→</span>
+    </div>
+  </div>
+))}
 
   </div>
 
@@ -239,27 +343,27 @@ export default function YoungCreatorsPage() {
 
     <div>
 
-      <p className="uppercase tracking-[0.4em] text-[#D4AF37]">
+      <p className="uppercase tracking-[0.4em] text-slate-900">
         MEET YOUR INSTRUCTOR
       </p>
 
-      <h2 className="mt-6 text-5xl font-bold">
+      <h2 className="mt-6 text-5xl font-bold text-[#2563EB]">
         Andrè Logan
       </h2>
 
-      <p className="mt-8 text-lg leading-8 text-gray-400">
+      <p className="mt-8 text-lg leading-8 text-slate-600">
         I'm passionate about helping young people discover that technology
         isn't just something they use—it's something they can create.
       </p>
 
-      <p className="mt-6 text-lg leading-8 text-gray-400">
+      <p className="mt-6 text-lg leading-8 text-slate-600">
         As a former Software Engineer at JPMorgan Chase and former Software
         Development Instructor at Code Differently, I've had the opportunity
         to build real-world software and teach the next generation of
         developers.
       </p>
 
-      <p className="mt-6 text-lg leading-8 text-gray-400">
+      <p className="mt-6 text-lg leading-8 text-slate-600">
         My goal is simple: give every student the confidence to build,
         experiment, solve problems, and leave camp with a website they're
         excited to share.
@@ -269,11 +373,11 @@ export default function YoungCreatorsPage() {
 
         <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
 
-          <p className="text-3xl font-bold text-[#D4AF37]">
+          <p className="text-3xl font-bold text-[#2563EB]">
             2+
           </p>
 
-          <p className="mt-2 text-gray-400">
+          <p className="mt-2 text-slate-600">
             Years Teaching Software Development
           </p>
 
@@ -281,11 +385,11 @@ export default function YoungCreatorsPage() {
 
         <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
 
-          <p className="text-3xl font-bold text-[#D4AF37]">
+          <p className="text-3xl font-bold text-[#2563EB]">
             2+
           </p>
 
-          <p className="mt-2 text-gray-400">
+          <p className="mt-2 text-slate-600">
             Years as a Software Engineer
           </p>
 
@@ -293,11 +397,11 @@ export default function YoungCreatorsPage() {
 
         <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
 
-          <p className="text-3xl font-bold text-[#D4AF37]">
+          <p className="text-3xl font-bold text-[#2563EB]">
             Project
           </p>
 
-          <p className="mt-2 text-gray-400">
+          <p className="mt-2 text-slate-600">
             Based Learning
           </p>
 
@@ -305,11 +409,11 @@ export default function YoungCreatorsPage() {
 
         <div className="rounded-2xl border border-white/10 bg-white/5 p-6">
 
-          <p className="text-3xl font-bold text-[#D4AF37]">
+          <p className="text-3xl font-bold text-[#2563EB]">
             Small
           </p>
 
-          <p className="mt-2 text-gray-400">
+          <p className="mt-2 text-slate-600">
             Class Sizes
           </p>
 
@@ -329,17 +433,19 @@ export default function YoungCreatorsPage() {
 
   <div className="text-center">
 
-    <p className="uppercase tracking-[0.4em] text-[#D4AF37]">
+    <p className="uppercase tracking-[0.4em] text-slate-600">
       CAMP DETAILS
     </p>
 
-    <h2 className="mt-6 text-4xl font-bold md:text-6xl">
+    <h2 className="mt-6 text-4xl font-bold md:text-6xl text-slate-900">
       Everything You Need
+    </h2>
       <br />
+    <h2 className="mt-6 text-4xl font-bold md:text-6xl text-[#2563EB]">
       To Know
     </h2>
 
-    <p className="mx-auto mt-8 max-w-3xl text-lg leading-8 text-gray-400">
+    <p className="mx-auto mt-8 max-w-3xl text-lg leading-8 text-slate-600">
       Designed to provide students with a fun, engaging, and supportive
       introduction to web development.
     </p>
@@ -348,46 +454,53 @@ export default function YoungCreatorsPage() {
 
   <div className="mt-20 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
 
-    {[
-      {
-        title: "👦 Ages",
-        value: "10–17 Years Old",
-      },
-      {
-        title: "📅 Duration",
-        value: "8 Weeks",
-      },
-      {
-        title: "💻 Format",
-        value: "Live Online",
-      },
-      {
-        title: "🗓 Schedule",
-        value: "Tuesday & Thursday\n4:30 PM – 6:00 PM",
-      },
-      {
-        title: "👥 Class Size",
-        value: "Maximum of 10 Students",
-      },
-{
-  title: "💲 Early Enrollment",
-  value:
-    "$250 Early Bird\n\nRegular Tuition: $300\n\nSave $50 when you enroll before the Early Enrollment Deadline.",
-},
-    ].map((item) => (
-      <div
-        key={item.title}
-        className="rounded-3xl border border-white/10 bg-white/5 p-8 transition duration-300 hover:border-[#D4AF37]/40 hover:bg-white/10"
-      >
-        <h3 className="text-2xl font-bold">
-          {item.title}
-        </h3>
 
-        <p className="mt-6 whitespace-pre-line text-lg leading-8 text-gray-400">
-          {item.value}
-        </p>
+{projects.map((project) => {
+  const Icon = project.icon;
+
+  return (
+    <div
+      key={project.title}
+      className="
+        group
+        rounded-3xl
+        border-2
+        border-blue-100
+        bg-gradient-to-br
+        from-white
+        to-blue-50
+        p-8
+        shadow-lg
+        transition-all
+        duration-300
+        hover:-translate-y-2
+        hover:border-[#2563EB]
+        hover:shadow-2xl
+        hover:ring-4
+        hover:ring-blue-100
+      "
+    >
+      <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-[#2563EB] to-[#4F8CFF] shadow-lg">
+        <Icon
+          size={34}
+          className="text-white transition-transform duration-300 group-hover:scale-110"
+        />
       </div>
-    ))}
+
+      <h3 className="mt-6 text-2xl font-bold text-slate-900 transition-colors group-hover:text-[#2563EB]">
+        {project.title}
+      </h3>
+
+      <p className="mt-4 leading-8 text-slate-600">
+        {project.text}
+      </p>
+
+      <div className="mt-8 flex items-center gap-2 font-semibold text-[#2563EB] opacity-0 transition-all duration-300 group-hover:opacity-100">
+        View Project →
+      </div>
+    </div>
+  );
+})}
 
   </div>
 
@@ -399,7 +512,7 @@ export default function YoungCreatorsPage() {
 
   <div className="text-center">
 
-    <p className="uppercase tracking-[0.4em] text-[#D4AF37]">
+    <p className="uppercase tracking-[0.4em] text-[#2563EB]">
       FREQUENTLY ASKED QUESTIONS
     </p>
 

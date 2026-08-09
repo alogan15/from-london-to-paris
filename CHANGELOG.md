@@ -4,11 +4,80 @@ All notable changes to From London to Paris.
 
 ---
 
+# v2.1.0 — Young Creators Experience
+
+## 🚀 Added
+
+### Young Creators Redesign
+
+- Dedicated Young Creators navigation
+- Kid-friendly blue & white branding
+- Complete hero redesign
+- New enrollment announcement banner
+- Updated CTA system
+- Responsive Young Creators navigation
+
+### Interactive Learning Playground
+
+- Interactive coding playground
+- VS Code-inspired code editor
+- Live browser preview
+- HTML lesson
+- CSS lesson
+- JavaScript lesson
+- Active lesson switching
+- Improved playground UI
+- Browser chrome redesign
+- Editor hover states
+- Lesson selection states
+
+### Curriculum
+
+- Learning Journey section
+- Redesigned curriculum cards
+- One Incredible Transformation section
+- Camp Details redesign
+- Real Projects section
+- Meet the Instructor improvements
+
+### UI Improvements
+
+- Lucide icon migration
+- Improved spacing system
+- Better button hierarchy
+- Softer blue gradients
+- Better card styling
+- Consistent borders
+- Updated shadows
+
+## ✨ Improved
+
+- Overall Young Creators user experience
+- Parent conversion flow
+- Student engagement
+- Mobile responsiveness
+- Visual consistency
+- Interactive learning experience
+
+## 🎯 Next Release — v2.2.0
+
+- Wire Young Creators navbar
+- FAQ section
+- Parent Benefits section
+- Testimonials
+- Gallery
+- Mobile polish
+- Playground enhancements
+- Enrollment integrations
+
+---
+
 # v2.0.0 — Platform Expansion
 
 ## 🚀 Added
 
 ### Young Creators
+
 - Complete Young Creators landing page
 - Hero section
 - Why Young Creators section
@@ -18,16 +87,18 @@ All notable changes to From London to Paris.
 - Final CTA section
 
 ### Enrollment Platform
+
 - Custom multi-section enrollment experience
 - Parent Information
 - Student Information
-- Multi-student registration ("Add Child")
+- Multi-student registration (Add Child)
 - Tuition selection
 - Parent Notes
 - Agreements & Permissions
-- Registration submit page
+- Registration submission workflow
 
 ### Consultation Platform
+
 - Dedicated Consultation landing page
 - Hero section
 - Client Information
@@ -39,32 +110,30 @@ All notable changes to From London to Paris.
 - Consultation submission workflow
 
 ### Navigation
+
 - Premium Get Started desktop dropdown
 - Mobile expandable Get Started menu
 - Dedicated Consultation page
-- Updated CTA routing across the website
+- Updated CTA routing
 - Social media integration
 - Contact information in footer
 
 ## ✨ Improved
 
 - Mobile navigation experience
-- Responsive navigation across desktop and mobile
+- Responsive navigation
 - CTA flow throughout the website
-- User journey from homepage to conversion
+- Homepage conversion flow
 - Footer organization
 - Navigation consistency
-- Overall site architecture
+- Site architecture
 
 ## 🎯 Next Release — v2.1.0
 
-- Connect Discovery to Supabase
-- Connect Consultation to Supabase
-- Connect Camp Enrollment to Supabase
-- Email notifications
-- Success / Thank You pages
-- Form validation
-- Admin Dashboard
+- Young Creators redesign
+- Interactive curriculum
+- Improved branding
+- Live coding playground
 
 ---
 
@@ -72,23 +141,23 @@ All notable changes to From London to Paris.
 
 ## 🚀 Added
 
-- Step 5 – Design Preferences
-- Step 6 – Content & Brand Assets
-- Step 7 – Domain & Hosting
-- Step 8 – Review & Submit
-- Review screen summarizing client responses
-- Dynamic discovery workflow (8 steps)
-- "Other (Custom)" options throughout the Discovery Form
-- Brand & content assistance options
-- Content organization service offering
-- Website copy assistance service offering
+- Step 5 — Design Preferences
+- Step 6 — Content & Brand Assets
+- Step 7 — Domain & Hosting
+- Step 8 — Review & Submit
+- Review screen
+- Dynamic 8-step workflow
+- "Other (Custom)" options
+- Brand & content assistance
+- Content organization service
+- Website copy assistance
 
 ## ✨ Improved
 
-- Consistent UI across every discovery step
+- Consistent UI
 - Discovery navigation
 - Step headers
-- Client onboarding experience
+- Client onboarding
 - Discovery workflow organization
 
 ---
@@ -98,21 +167,21 @@ All notable changes to From London to Paris.
 ## 🚀 Added
 
 - Dedicated Services page
-- Website Care Plans section
-- Transparent pricing section
+- Website Care Plans
+- Transparent Pricing
 - Discovery landing page
 - Multi-step Discovery Form
-- Dynamic progress tracking
+- Progress tracking
 - Shared form state
-- Steps 1–4 of the Discovery workflow
-- Modular discovery architecture
+- Discovery Steps 1–4
+- Modular architecture
 
 ## ✨ Improved
 
-- Project folder organization
+- Folder organization
 - Component architecture
-- CTA flow routes clients into the Discovery experience
-- Services page hierarchy
+- CTA routing
+- Services hierarchy
 - Consultation-first pricing strategy
 
 ---
@@ -140,9 +209,9 @@ All notable changes to From London to Paris.
 ## 🚀 Added
 
 - Homepage
-- Hero section
+- Hero
 - Navigation
 - Footer
 - What We Build
 - Why FLTP
-- Dark luxury branding
+- Premium dark branding

@@ -3,6 +3,17 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  /* Young Creators Theme */
+  --yc-blue: #2563eb;
+  --yc-sky: #38bdf8;
+  --yc-green: #84cc16;
+  --yc-yellow: #facc15;
+
+  --yc-bg: #f8fafc;
+  --yc-card: #ffffff;
+  --yc-text: #0f172a;
+  --yc-muted: #64748b;
 }
 
 @theme inline {

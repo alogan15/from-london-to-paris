@@ -11,10 +11,11 @@ export default function TuitionSelection() {
       id: "early",
       title: "Early Enrollment",
       price: "$250",
-      badge: "Save $50",
-      description: "Register before the Early Enrollment Deadline.",
+      badge: "🎉 Save $50",
+      description:
+        "Reserve your student's seat with a deposit before the Early Enrollment deadline.",
       features: [
-        "8-Week Live Coding Camp",
+        "6-Week Live Coding Camp",
         "Small Class Sizes",
         "Demo Day Presentation",
         "Certificate of Completion",
@@ -25,9 +26,10 @@ export default function TuitionSelection() {
       title: "Standard Enrollment",
       price: "$300",
       badge: "Regular Tuition",
-      description: "Available after Early Enrollment ends.",
+      description:
+        "Available after the Early Enrollment deadline has ended.",
       features: [
-        "8-Week Live Coding Camp",
+        "6-Week Live Coding Camp",
         "Small Class Sizes",
         "Demo Day Presentation",
         "Certificate of Completion",
@@ -36,21 +38,21 @@ export default function TuitionSelection() {
   ];
 
   return (
-    <section className="mx-auto mb-20 max-w-6xl rounded-3xl border border-white/10 bg-white/5 p-10">
+    <section className="rounded-3xl border border-blue-100 bg-white p-8 shadow-lg">
 
       <div className="text-center">
 
-        <p className="uppercase tracking-[0.35em] text-[#D4AF37]">
+        <p className="uppercase tracking-[0.35em] font-semibold text-blue-600">
           TUITION
         </p>
 
-        <h2 className="mt-4 text-4xl font-bold">
+        <h2 className="mt-4 text-4xl font-bold text-slate-900">
           Choose Your Enrollment
         </h2>
 
-        <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-gray-400">
-          Reserve your student's seat today and take advantage of Early
-          Enrollment pricing while spaces are still available.
+        <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-slate-600">
+          Reserve your student's seat today and save with our Early
+          Enrollment discount.
         </p>
 
       </div>
@@ -65,36 +67,45 @@ export default function TuitionSelection() {
               key={plan.id}
               type="button"
               onClick={() => setSelected(plan.id)}
-              className={`relative rounded-3xl border p-10 text-left transition-all duration-300 ${
-                isSelected
-                  ? "border-[#D4AF37] bg-[#D4AF37]/10 shadow-[0_0_40px_rgba(212,175,55,0.15)]"
-                  : "border-white/10 bg-black hover:border-[#D4AF37]/40"
-              }`}
+              className={`
+                relative
+                rounded-3xl
+                border-2
+                p-10
+                text-left
+                transition-all
+                duration-300
+                ${
+                  isSelected
+                    ? "border-blue-600 bg-blue-50 shadow-xl ring-4 ring-blue-100"
+                    : "border-slate-200 bg-white hover:border-blue-400 hover:shadow-lg"
+                }
+              `}
             >
               {isSelected && (
                 <CheckCircle
-                  className="absolute right-6 top-6 text-[#D4AF37]"
+                  className="absolute right-6 top-6 text-blue-600"
                   size={30}
                 />
               )}
 
-              <p className="uppercase tracking-[0.3em] text-sm text-[#D4AF37]">
-                {plan.title}
-              </p>
+              <div className="inline-flex rounded-full bg-blue-100 px-4 py-2 text-sm font-semibold text-blue-700">
+                {plan.badge}
+              </div>
 
-              <h3 className="mt-6 text-6xl font-bold">
-                {plan.price}
+              <h3 className="mt-6 text-2xl font-bold text-slate-900">
+                {plan.title}
               </h3>
 
-              <p className="mt-4 font-semibold text-[#D4AF37]">
-                {plan.badge}
+              <p className="mt-4 text-5xl font-extrabold text-blue-600">
+                {plan.price}
               </p>
 
-              <p className="mt-6 leading-8 text-gray-400">
+              <p className="mt-5 leading-8 text-slate-600">
                 {plan.description}
               </p>
 
-              <div className="my-8 border-t border-white/10" />
+              <div className="my-8 border-t border-slate-200" />
 
               <div className="space-y-4">
 
@@ -104,24 +115,34 @@ export default function TuitionSelection() {
                     className="flex items-center gap-3"
                   >
                     <CheckCircle
-                      size={18}
-                      className="text-[#D4AF37]"
+                      size={20}
+                      className="text-blue-600"
                     />
 
-                    <span>{feature}</span>
+                    <span className="text-slate-700">
+                      {feature}
+                    </span>
                   </div>
                 ))}
 
               </div>
 
               <div
-                className={`mt-10 rounded-full py-4 text-center font-semibold transition ${
-                  isSelected
-                    ? "bg-[#D4AF37] text-black"
-                    : "border border-white/10"
-                }`}
+                className={`
+                  mt-10
+                  rounded-full
+                  py-4
+                  text-center
+                  font-semibold
+                  transition
+                  ${
+                    isSelected
+                      ? "bg-blue-600 text-white"
+                      : "border border-slate-300 text-slate-700 hover:border-blue-600 hover:text-blue-600"
+                  }
+                `}
               >
-                {isSelected ? "Selected" : "Select Plan"}
+                {isSelected ? "Selected ✓" : "Select Plan"}
               </div>
 
             </button>
@@ -130,9 +151,26 @@ export default function TuitionSelection() {
 
       </div>
 
-      <p className="mt-10 text-center text-sm text-gray-500">
-        Tuition includes all instruction, learning materials, Demo Day, and a
-        Certificate of Completion.
+      <div className="mt-12 rounded-2xl border border-blue-100 bg-blue-50 p-5 text-center">
+        <p className="font-semibold text-blue-700">
+          🎉 Early Enrollment Bonus
+        </p>
+
+        <p className="mt-2 text-slate-600">
+          Reserve your student's seat with a deposit by{" "}
+          <span className="font-semibold">
+            September 15
+          </span>{" "}
+          and receive{" "}
+          <span className="font-bold text-blue-600">
+            $50 off tuition.
+          </span>
+        </p>
+      </div>
+
+      <p className="mt-8 text-center text-sm text-slate-500">
+        Tuition includes all instruction, learning materials, Demo Day,
+        and a Certificate of Completion.
       </p>
 
     </section>

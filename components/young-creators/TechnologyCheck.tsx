@@ -1,6 +1,13 @@
 "use client";
 
-import { Laptop, Wifi, Camera, Mic, Download, Monitor } from "lucide-react";
+import {
+  Laptop,
+  Wifi,
+  Camera,
+  Mic,
+  Download,
+  Monitor,
+} from "lucide-react";
 
 const questions = [
   {
@@ -37,41 +44,37 @@ const questions = [
 
 export default function TechnologyCheck() {
   return (
-    <section className="mx-auto mb-20 max-w-5xl rounded-3xl border border-white/10 bg-white/5 p-10">
-
-      <h2 className="text-3xl font-bold">
-            Student Technology Readiness
+    <section className="rounded-3xl border border-blue-100 bg-white p-8 shadow-lg">
+      <h2 className="text-3xl font-bold text-blue-600">
+        Student Technology Readiness
       </h2>
 
-      <p className="mt-3 text-gray-400">
-        Let's make sure your student has everything needed for a great learning
-        experience.
+      <p className="mt-3 text-slate-600">
+        Let's make sure your student has everything needed for a successful
+        coding camp experience.
       </p>
 
       <div className="mt-12 space-y-10">
-
         {questions.map((question) => {
           const Icon = question.icon;
 
           return (
             <div key={question.name}>
-
               <div className="mb-5 flex items-center gap-3">
+                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-blue-100">
+                  <Icon className="text-blue-600" size={22} />
+                </div>
 
-                <Icon className="text-[#D4AF37]" size={24} />
-
-                <h3 className="text-xl font-semibold">
+                <h3 className="text-xl font-semibold text-slate-900">
                   {question.title}
                 </h3>
-
               </div>
 
               <div className="grid gap-5 sm:grid-cols-2">
-
                 {question.options.map((option) => (
                   <label
                     key={option}
-                    className="group relative cursor-pointer"
+                    className="group cursor-pointer"
                   >
                     <input
                       type="radio"
@@ -80,19 +83,31 @@ export default function TechnologyCheck() {
                       className="peer sr-only"
                     />
 
-                    <div className="rounded-2xl border border-white/10 bg-black p-6 transition-all duration-300 hover:border-[#D4AF37] peer-checked:border-[#D4AF37] peer-checked:bg-[#D4AF37]/10">
-
-                      <p className="text-lg font-semibold transition group-hover:text-[#D4AF37] peer-checked:text-[#D4AF37]">
+                    <div
+                      className="
+                        rounded-2xl
+                        border-2
+                        border-slate-200
+                        bg-white
+                        p-6
+                        text-center
+                        transition-all
+                        duration-300
+                        hover:border-blue-400
+                        hover:bg-blue-50
+                        peer-checked:border-blue-600
+                        peer-checked:bg-blue-50
+                        peer-checked:ring-4
+                        peer-checked:ring-blue-100
+                      "
+                    >
+                      <p className="text-lg font-semibold text-slate-900">
                         {option}
                       </p>
-
                     </div>
-
                   </label>
                 ))}
-
               </div>
-
             </div>
           );
         })}
@@ -100,37 +115,42 @@ export default function TechnologyCheck() {
         {/* Operating System */}
 
         <div>
-
           <div className="mb-5 flex items-center gap-3">
+            <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-blue-100">
+              <Monitor className="text-blue-600" size={22} />
+            </div>
 
-            <Monitor className="text-[#D4AF37]" size={24} />
-
-            <h3 className="text-xl font-semibold">
+            <h3 className="text-xl font-semibold text-slate-900">
               Operating System
             </h3>
-
           </div>
 
-          <select className="w-full rounded-2xl border border-white/10 bg-black px-5 py-5 outline-none transition focus:border-[#D4AF37]">
-
+          <select
+            className="
+              w-full
+              rounded-2xl
+              border
+              border-slate-200
+              bg-white
+              px-5
+              py-4
+              text-slate-900
+              transition
+              focus:border-blue-600
+              focus:outline-none
+              focus:ring-4
+              focus:ring-blue-100
+            "
+          >
             <option>Select Operating System</option>
-
             <option>Windows</option>
-
             <option>Mac</option>
-
             <option>Chromebook</option>
-
             <option>Linux</option>
-
             <option>Other</option>
-
           </select>
-
         </div>
-
       </div>
-
     </section>
   );
 }

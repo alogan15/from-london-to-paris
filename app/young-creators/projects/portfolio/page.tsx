@@ -20,9 +20,7 @@ export default function PortfolioExamplePage() {
         <div className="rounded-full bg-blue-600 px-5 py-2 text-sm font-semibold text-white shadow">
           Student Example
         </div>
-        <div className="mt-6 inline-flex rounded-full bg-green-100 px-4 py-2 text-sm font-semibold text-green-700">
-            🌟 This is the type of website you'll build by the end of camp.
-        </div>
+      
       </div>
 
       {/* Hero */}

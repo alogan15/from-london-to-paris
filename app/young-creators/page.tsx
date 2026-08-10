@@ -6,47 +6,56 @@ import {
   Trophy,
   Pizza,
   Music,
-  BriefcaseBusiness,
+  Briefcase,
   Rocket,
+  CircleHelp,
 } from "lucide-react";
 
 export default function YoungCreatorsPage() {
 
-  const projects = [
+const projects = [
   {
     icon: User,
     title: "Personal Portfolio",
-    text: "Create a website that introduces yourself, your hobbies, and your accomplishments.",
+    href: "/young-creators/projects/portfolio",
+    text: "Create a website that introduces yourself...",
   },
   {
     icon: Trophy,
     title: "Favorite Team Website",
-    text: "Design a modern fan page for your favorite sports team or athlete.",
+    href: "/young-creators/projects/sports",
+    text: "Design a modern fan page for your favorite sports team.",
   },
   {
     icon: Pizza,
     title: "Restaurant Website",
-    text: "Build a professional restaurant homepage complete with menus and contact information.",
+    href: "/young-creators/projects/restaurant",
+    text: "Build a professional restaurant homepage.",
   },
   {
     icon: Music,
     title: "Music Artist Page",
-    text: "Showcase your favorite artist or album with custom layouts and media sections.",
+    href: "/young-creators/projects/music",
+    text: "Showcase your favorite artist or album.",
   },
   {
-    icon: BriefcaseBusiness,
+    icon: Briefcase,
     title: "Business Landing Page",
-    text: "Learn how real businesses present their products and services online.",
+    href: "/young-creators/projects/business",
+    text: "Learn how businesses present products online.",
   },
   {
     icon: Rocket,
     title: "Final Showcase Project",
-    text: "Combine everything you've learned into a polished website presented on Demo Day.",
+    href: "/young-creators/projects/showcase",
+    text: "Combine everything into your final website.",
   },
 ];
 
 
   return (
+
+
 <main className="min-h-screen bg-gradient-to-br from-sky-50 via-white to-blue-50">
   
         <Navbar />
@@ -120,7 +129,9 @@ export default function YoungCreatorsPage() {
 
         <Curriculum />
 
+        </div>
 
+      </section>
           {/* The Journey */}
 
           <section
@@ -250,31 +261,37 @@ export default function YoungCreatorsPage() {
     emoji: "👤",
     title: "Personal Portfolio",
     text: "Create a website that introduces yourself, your hobbies, and your accomplishments.",
+    href: "/young-creators/projects/portfolio",
   },
   {
     emoji: "🏀",
     title: "Favorite Team Website",
     text: "Design a modern fan page for your favorite sports team or athlete.",
+    href: "/young-creators/projects/sports",
   },
   {
     emoji: "🍕",
     title: "Restaurant Website",
     text: "Build a professional restaurant homepage complete with menus and contact information.",
+    href: "/young-creators/projects/restaurant",
   },
   {
     emoji: "🎵",
     title: "Music Artist Page",
     text: "Showcase your favorite artist or album with custom layouts and media sections.",
+    href: "/young-creators/projects/music",
   },
   {
     emoji: "💼",
     title: "Business Landing Page",
     text: "Learn how real businesses present their products and services online.",
+    href: "/young-creators/projects/business",
   },
   {
     emoji: "🚀",
     title: "Final Showcase Project",
     text: "Combine everything you've learned into a polished website presented on Demo Day.",
+    href: "/young-creators/projects/showcase",
   },
 ].map((project) => (
   <div
@@ -310,10 +327,12 @@ export default function YoungCreatorsPage() {
       {project.text}
     </p>
 
-    <div className="mt-8 flex items-center gap-2 font-semibold text-[#2563EB] opacity-0 transition-all duration-300 group-hover:opacity-100">
-      View Project
-      <span>→</span>
-    </div>
+<Link
+  href={project.href}
+  className="mt-8 inline-flex items-center font-semibold text-[#2563EB] hover:underline"
+>
+  View Project →
+</Link>
   </div>
 ))}
 
@@ -414,7 +433,7 @@ export default function YoungCreatorsPage() {
           </p>
 
           <p className="mt-2 text-slate-600">
-            Class Sizes
+            Class Sizes (10-15 Students)
           </p>
 
         </div>
@@ -510,71 +529,94 @@ export default function YoungCreatorsPage() {
 
 <section className="mx-auto max-w-7xl px-6 py-32">
 
-  <div className="text-center">
+<div className="text-center">
 
-    <p className="uppercase tracking-[0.4em] text-[#2563EB]">
-      FREQUENTLY ASKED QUESTIONS
-    </p>
+  <p className="uppercase tracking-[0.4em] font-semibold text-[#2563EB]">
+    FREQUENTLY ASKED QUESTIONS
+  </p>
 
-    <h2 className="mt-6 text-4xl font-bold md:text-6xl">
-      Questions Parents
-      <br />
+  <h2 className="mt-6 text-4xl font-bold text-slate-900 md:text-6xl">
+    Questions Parents
+    <br />
+    <span className="text-[#2563EB]">
       Often Ask
-    </h2>
+    </span>
+  </h2>
 
-    <p className="mx-auto mt-8 max-w-3xl text-lg leading-8 text-gray-400">
-      Everything you need to know before enrolling your student.
-    </p>
+  <p className="mx-auto mt-8 max-w-3xl text-lg leading-8 text-slate-600">
+    Everything you need to know before enrolling your student.
+  </p>
 
-  </div>
+</div>
 
   <div className="mt-20 space-y-6">
 
-    {[
-      {
-        question: "Does my child need coding experience?",
-        answer:
-          "No. This camp is designed for beginners. We'll guide students step by step from their very first line of code.",
-      },
-      {
-        question: "Does my child need a laptop?",
-        answer:
-          "Yes. Students should have access to a laptop or desktop computer with a reliable internet connection. Tablets and phones are not recommended.",
-      },
-      {
-        question: "What software is required?",
-        answer:
-          "We'll use free tools including Visual Studio Code/CodePen, Google Meet, Zoom, and stable Wifi. Instructions will be provided before camp begins.",
-      },
-      {
-        question: "Will students build a real website?",
-        answer:
-          "Absolutely. Every student will complete projects throughout the camp and publish a final website they can proudly share.",
-      },
-      {
-        question: "What happens if my child misses a class?",
-        answer:
-          "We'll work with families to help students stay on track by providing guidance and resources whenever possible.",
-      },
-      {
-        question: "Will students receive a certificate?",
-        answer:
-          "Yes. Students who complete the camp will receive a Young Creators Certificate of Completion.",
-      },
-    ].map((faq) => (
-      <div
-        key={faq.question}
-        className="rounded-3xl border border-white/10 bg-white/5 p-8"
-      >
-        <h3 className="text-2xl font-bold">
-          {faq.question}
-        </h3>
+{[
+  {
+    question: "Does my child need coding experience?",
+    answer:
+      "No. This camp is designed for beginners. We'll guide students step by step from their very first line of code.",
+  },
+  {
+    question: "Does my child need a laptop?",
+    answer:
+      "Yes. Students should have access to a laptop or desktop computer with a reliable internet connection. Tablets and phones are not recommended.",
+  },
+  {
+    question: "What software is required?",
+    answer:
+      "We'll use free tools including Visual Studio Code, Google Meet, Zoom, and a reliable internet connection. Instructions will be provided before camp begins.",
+  },
+  {
+    question: "Will students build a real website?",
+    answer:
+      "Absolutely. Every student will complete projects throughout the camp and publish a final website they can proudly share.",
+  },
+  {
+    question: "What happens if my child misses a class?",
+    answer:
+      "We'll work with families to help students stay on track by providing guidance and resources whenever possible.",
+  },
+  {
+    question: "Will students receive a certificate?",
+    answer:
+      "Yes. Students who complete the camp will receive a Young Creators Certificate of Completion.",
+  },
+].map((faq) => (
+  <div
+    key={faq.question}
+    className="
+      group
+      rounded-3xl
+      border-2
+      border-blue-100
+      bg-gradient-to-br
+      from-white
+      to-blue-50
+      p-8
+      shadow-lg
+      transition-all
+      duration-300
+      hover:-translate-y-1
+      hover:border-[#2563EB]
+      hover:shadow-2xl
+      hover:ring-4
+      hover:ring-blue-100
+    "
+  >
+<div className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-[#2563EB] shadow-md transition-transform duration-300 group-hover:scale-110">
+  <CircleHelp size={24} className="text-white" />
+</div>
 
-        <p className="mt-5 leading-8 text-gray-400">
-          {faq.answer}
-        </p>
-      </div>
-    ))}
+    <h3 className="text-2xl font-bold text-slate-900 transition-colors group-hover:text-[#2563EB]">
+      {faq.question}
+    </h3>
+
+    <p className="mt-5 leading-8 text-slate-600">
+      {faq.answer}
+    </p>
+  </div>
+))}
 
   </div>
 
@@ -584,104 +626,81 @@ export default function YoungCreatorsPage() {
 
 <section className="mx-auto max-w-6xl px-6 py-32 text-center">
 
-  <p className="uppercase tracking-[0.4em] text-[#D4AF37]">
+  <p className="uppercase tracking-[0.4em] text-slate-600">
     READY TO GET STARTED?
   </p>
 
-  <h2 className="mt-6 text-5xl font-bold leading-tight md:text-7xl">
+  <h2 className="mt-6 text-5xl font-bold leading-tight md:text-7xl text-slate-900">
     Give Your Child
     <br />
-    A Head Start
+    <span className="text-[#2563EB]">
+      A Head Start
+    </span>
     <br />
     In Technology.
   </h2>
 
-  <p className="mx-auto mt-10 max-w-3xl text-xl leading-9 text-gray-400">
-    Young Creators is more than a coding camp. It's an opportunity for
-    students to build confidence, solve problems, and create something
-    they're proud to share. Whether your child dreams of becoming a
-    developer or simply wants to explore technology, this is where the
-    journey begins.
+  <p className="mx-auto mt-10 max-w-3xl text-xl leading-9 text-slate-600">
+    Young Creators is more than a coding camp. Students build confidence,
+    solve real problems, and create websites they're excited to share with
+    friends and family.
   </p>
 
   <div className="mt-14 flex flex-col justify-center gap-6 sm:flex-row">
 
     <Link
-      href="/discovery"
-      className="rounded-full bg-[#D4AF37] px-10 py-5 text-lg font-semibold text-black transition duration-300 hover:scale-105"
+      href="/young-creators/enroll"
+      className="
+        inline-flex
+        items-center
+        justify-center
+        rounded-full
+        bg-[#2563EB]
+        px-10
+        py-5
+        text-lg
+        font-semibold
+        text-white
+        shadow-lg
+        transition-all
+        duration-300
+        hover:-translate-y-1
+        hover:bg-blue-700
+        hover:shadow-xl
+      "
     >
-      Reserve Your Spot
+      Reserve Your Spot →
     </Link>
 
     <a
       href="mailto:fltp8125@gmail.com"
-      className="rounded-full border border-white/20 px-10 py-5 text-lg transition hover:border-[#D4AF37] hover:text-[#D4AF37]"
+      className="
+        inline-flex
+        items-center
+        justify-center
+        rounded-full
+        border-2
+        border-[#2563EB]
+        bg-white
+        px-10
+        py-5
+        text-lg
+        font-semibold
+        text-[#2563EB]
+        shadow-sm
+        transition-all
+        duration-300
+        hover:-translate-y-1
+        hover:bg-blue-50
+        hover:shadow-lg
+      "
     >
       Ask a Question
     </a>
 
   </div>
 
-  <p className="mt-10 text-sm uppercase tracking-[0.3em] text-gray-500">
-    Limited class sizes • Live instruction • Hands-on learning
-  </p>
-
 </section>
-          <h2 className="mt-6 text-4xl font-bold md:text-6xl">
-            Learning by Building.
-          </h2>
-
-          <p className="mx-auto mt-8 max-w-3xl text-lg leading-8 text-gray-400">
-            Every lesson is project-based. Students learn modern web
-            development while building real websites from the ground up.
-          </p>
-
-        </div>
-
-        <div className="mt-20 grid gap-8 md:grid-cols-3">
-
-          <div className="rounded-3xl border border-white/10 bg-white/5 p-10">
-
-            <h3 className="text-2xl font-bold">
-              💡 Learn by Building
-            </h3>
-
-            <p className="mt-6 leading-8 text-gray-400">
-              No boring lectures. Students write real code from day one and
-              see their projects come to life.
-            </p>
-
-          </div>
-
-          <div className="rounded-3xl border border-white/10 bg-white/5 p-10">
-
-            <h3 className="text-2xl font-bold">
-              🚀 Real Skills
-            </h3>
-
-            <p className="mt-6 leading-8 text-gray-400">
-              Learn HTML, CSS, JavaScript, responsive design, GitHub, and
-              website deployment.
-            </p>
-
-          </div>
-
-          <div className="rounded-3xl border border-white/10 bg-white/5 p-10">
-
-            <h3 className="text-2xl font-bold">
-              🤝 Small Class Sizes
-            </h3>
-
-            <p className="mt-6 leading-8 text-gray-400">
-              Every student receives personal guidance and mentorship in a
-              supportive learning environment.
-            </p>
-
-          </div>
-
-        </div>
-
-      </section>
 
     </main>
   );

@@ -49,8 +49,7 @@ export default function ConsultationPage() {
     }
   };
 
-  // We'll connect Supabase next
-};
+
   const [formData, setFormData] = useState({
     first_name: "",
     last_name: "",

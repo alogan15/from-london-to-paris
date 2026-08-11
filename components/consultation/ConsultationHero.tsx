@@ -21,7 +21,7 @@ export default function ConsultationHero() {
       </p>
 
       <div className="mt-12 inline-flex rounded-full border border-[#D4AF37]/30 bg-[#D4AF37]/10 px-6 py-3 text-[#D4AF37]">
-        Free Initial Consultation
+        Free 30Min Consultation
       </div>
 
     </section>

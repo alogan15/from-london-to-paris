@@ -10,11 +10,44 @@ import BudgetTimeline from "@/components/consultation/BudgetTimeline";
 import ContactMethod from "@/components/consultation/ContactMethod";
 import SubmitConsultation from "@/components/consultation/SubmitConsultation";
 import FAQ from "@/components/consultation/FAQ";
+import { submitConsultation } from "@/services/consultation";
 
 export default function ConsultationPage() {
   const [loading, setLoading] = useState(false);
   const handleSubmit = async () => {
-  console.log(formData);
+    try {
+      setLoading(true);
+
+      await submitConsultation(formData);
+
+      alert("Consultation request submitted!");
+
+      setFormData({
+        first_name: "",
+        last_name: "",
+        business_name: "",
+        email: "",
+        phone: "",
+
+        project_description: "",
+        project_goals: "",
+        current_website: "",
+        inspiration_sites: "",
+
+        services_interested: [],
+
+        estimated_budget: "",
+        desired_timeline: "",
+
+        preferred_contact_method: "",
+      });
+    } catch (error) {
+      console.error(error);
+      alert("Something went wrong while submitting.");
+    } finally {
+      setLoading(false);
+    }
+  };
 
   // We'll connect Supabase next
 };

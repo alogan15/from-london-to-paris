@@ -76,7 +76,7 @@ export default function ProjectDetails({
               onChange={(e) =>
                 updateField("current_website", e.target.value)
               }
-            placeholder="https://yourwebsite.com (leave blank if none)"
+            placeholder="(leave blank if none)"
             className="w-full rounded-2xl border border-white/10 bg-black px-6 py-5 outline-none transition duration-300 focus:border-[#D4AF37]"
           />
         </div>

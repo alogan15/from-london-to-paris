@@ -1,7 +1,15 @@
 "use client";
 
-import { useState } from "react";
 import { CheckCircle } from "lucide-react";
+import { RegistrationFormData } from "@/types/registration";
+
+interface AgreementsProps {
+  formData: RegistrationFormData;
+  updateField: (
+    field: keyof RegistrationFormData,
+    value: any
+  ) => void;
+}
 
 const requiredItems = [
   {
@@ -24,17 +32,10 @@ const requiredItems = [
   },
 ];
 
-export default function Agreements() {
-  const [required, setRequired] = useState<string[]>([]);
-  const [mediaRelease, setMediaRelease] = useState(false);
-
-  const toggleRequired = (id: string) => {
-    setRequired((current) =>
-      current.includes(id)
-        ? current.filter((item) => item !== id)
-        : [...current, id]
-    );
-  };
+export default function Agreements({
+  formData,
+  updateField,
+}: AgreementsProps) {
 
   return (
     <section className="rounded-3xl border border-blue-100 bg-white p-8 shadow-lg">
@@ -49,70 +50,86 @@ export default function Agreements() {
 
       {/* Required Agreements */}
 
-      <div className="mt-12">
+ <div className="mt-12">
 
-        <h3 className="mb-6 text-sm font-semibold uppercase tracking-[0.35em] text-blue-600">
-          Required Agreements
-        </h3>
+  <h3 className="mb-6 text-sm font-semibold uppercase tracking-[0.35em] text-blue-600">
+    Required Agreements
+  </h3>
 
-        <div className="space-y-6">
+  <div className="space-y-6">
 
-          {requiredItems.map((item) => {
-            const isChecked = required.includes(item.id);
+    {requiredItems.map((item) => (
+      <div
+        key={item.id}
+        className="rounded-3xl border border-slate-200 bg-white p-6"
+      >
+        <h4 className="text-xl font-semibold text-slate-900">
+          {item.title}
+        </h4>
 
-            return (
-              <button
-                key={item.id}
-                type="button"
-                onClick={() => toggleRequired(item.id)}
-                className={`
-                  w-full
-                  rounded-3xl
-                  border-2
-                  p-6
-                  text-left
-                  transition-all
-                  duration-300
-                  ${
-                    isChecked
-                      ? "border-blue-600 bg-blue-50 ring-4 ring-blue-100"
-                      : "border-slate-200 bg-white hover:border-blue-400 hover:bg-blue-50"
-                  }
-                `}
-              >
-                <div className="flex items-start justify-between gap-6">
+        <p className="mt-3 leading-7 text-slate-600">
+          {item.description}
+        </p>
+      </div>
+    ))}
 
-                  <div>
+  </div>
 
-                    <h4 className="text-xl font-semibold text-slate-900">
-                      {item.title}
-                    </h4>
+</div>
+<div className="mt-8">
 
-                    <p className="mt-3 leading-7 text-slate-600">
-                      {item.description}
-                    </p>
+  <button
+    type="button"
+    onClick={() =>
+      updateField(
+        "agree_to_terms",
+        !formData.agree_to_terms
+      )
+    }
+    className={`
+      w-full
+      rounded-3xl
+      border-2
+      p-6
+      text-left
+      transition-all
+      duration-300
+      ${
+        formData.agree_to_terms
+          ? "border-blue-600 bg-blue-50 ring-4 ring-blue-100"
+          : "border-slate-200 bg-white hover:border-blue-400"
+      }
+    `}
+  >
+    <div className="flex items-center justify-between">
 
-                  </div>
+      <div>
 
-                  <CheckCircle
-                    size={30}
-                    className={`transition ${
-                      isChecked
-                        ? "text-blue-600"
-                        : "text-slate-300"
-                    }`}
-                  />
+        <h4 className="text-xl font-semibold text-slate-900">
+          Agreement Confirmation
+        </h4>
 
-                </div>
-
-              </button>
-            );
-          })}
-
-        </div>
+        <p className="mt-2 leading-7 text-slate-600">
+          I have read and agree to the Participation Agreement,
+          Technology Requirements, and Camp Policies listed above.
+        </p>
 
       </div>
 
+      <CheckCircle
+        size={30}
+        className={
+          formData.agree_to_terms
+            ? "text-blue-600"
+            : "text-slate-300"
+        }
+      />
+
+    </div>
+
+  </button>
+
+</div>
       {/* Optional Media Release */}
 
       <div className="mt-14">
@@ -123,8 +140,13 @@ export default function Agreements() {
 
         <button
           type="button"
-          onClick={() => setMediaRelease(!mediaRelease)}
-          className={`
+            onClick={() =>
+              updateField(
+                "media_release",
+                !formData.media_release
+              )
+            }          
+            className={`
             w-full
             rounded-3xl
             border-2
@@ -133,7 +155,7 @@ export default function Agreements() {
             transition-all
             duration-300
             ${
-              mediaRelease
+              formData.media_release
                 ? "border-blue-600 bg-blue-50 ring-4 ring-blue-100"
                 : "border-slate-200 bg-white hover:border-blue-400 hover:bg-blue-50"
             }
@@ -159,7 +181,7 @@ export default function Agreements() {
             <CheckCircle
               size={30}
               className={`transition ${
-                mediaRelease
+              formData.media_release
                   ? "text-blue-600"
                   : "text-slate-300"
               }`}

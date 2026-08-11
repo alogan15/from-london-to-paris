@@ -1,20 +1,13 @@
-export interface RegistrationFormData {
+export interface StudentData {
+  id: string;
+
   first_name: string;
   last_name: string;
 
-  parent_name: string;
-  parent_email: string;
-  parent_phone: string;
+  age: number | null;
+  grade: string;
 
-  preferred_contact: string;
-
-  student_age: number | null;
-  student_grade: string;
-
-  emergency_contact_name: string;
-  emergency_contact_phone: string;
-
-  coding_experience: string;
+  experience_level: string;
 
   has_laptop: boolean;
   internet_access: boolean;
@@ -22,11 +15,20 @@ export interface RegistrationFormData {
   has_microphone: boolean;
   can_install_software: boolean;
   operating_system: string;
+}
 
-  allergies_or_notes: string;
+export interface RegistrationFormData {
+  parent_name: string;
+  parent_email: string;
+  parent_phone: string;
+  preferred_contact: string;
+
+  parent_notes: string;
 
   tuition_plan: string;
 
   agree_to_terms: boolean;
   media_release: boolean;
+
+  students: StudentData[];
 }

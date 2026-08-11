@@ -1,10 +1,20 @@
 "use client";
 
 import { CheckCircle } from "lucide-react";
-import { useState } from "react";
+import { RegistrationFormData } from "@/types/registration";
 
-export default function TuitionSelection() {
-  const [selected, setSelected] = useState("early");
+interface TuitionSelectionProps {
+  formData: RegistrationFormData;
+  updateField: (
+    field: keyof RegistrationFormData,
+    value: any
+  ) => void;
+}
+
+export default function TuitionSelection({
+  formData,
+  updateField,
+}: TuitionSelectionProps) {
 
   const plans = [
     {
@@ -60,14 +70,15 @@ export default function TuitionSelection() {
       <div className="mt-16 grid gap-8 lg:grid-cols-2">
 
         {plans.map((plan) => {
-          const isSelected = selected === plan.id;
-
+            const isSelected =
+              formData.tuition_plan === plan.id;
           return (
             <button
               key={plan.id}
               type="button"
-              onClick={() => setSelected(plan.id)}
-              className={`
+              onClick={() =>
+                updateField("tuition_plan", plan.id)
+}              className={`
                 relative
                 rounded-3xl
                 border-2

@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-import { RegistrationFormData } from "@/types/registration";
+import { RegistrationFormData, StudentData } from "@/types/registration";
 import { submitRegistration } from "@/services/registration";
 
 import RegistrationHero from "./RegistrationHero";
@@ -17,46 +17,107 @@ import SubmitRegistration from "./SubmitRegistration";
 export default function RegistrationForm() {
   const [loading, setLoading] = useState(false);
 
-  const [formData, setFormData] = useState<RegistrationFormData>({
-    first_name: "",
-    last_name: "",
-
+const [formData, setFormData] =
+  useState<RegistrationFormData>({
     parent_name: "",
     parent_email: "",
     parent_phone: "",
 
-    student_age: null,
-    student_grade: "",
+    preferred_contact: "Email",
 
-    emergency_contact_name: "",
-    emergency_contact_phone: "",
+    students: [
+      {
+        id: crypto.randomUUID(),
 
-    coding_experience: "",
+        first_name: "",
+        last_name: "",
 
-    has_laptop: false,
-    internet_access: false,
-    has_webcam: false,
-    has_microphone: false,
-    can_install_software: false,
-    operating_system: "",
+        age: null,
+        grade: "",
 
-    allergies_or_notes: "",
+        experience_level: "",
+
+        has_laptop: false,
+        internet_access: false,
+        has_webcam: false,
+        has_microphone: false,
+        can_install_software: false,
+
+        operating_system: "",
+      },
+    ],
 
     tuition_plan: "",
+
+    parent_notes: "",
 
     agree_to_terms: false,
     media_release: false,
   });
 
-  const updateField = (
-    field: keyof RegistrationFormData,
-    value: any
-  ) => {
-    setFormData((prev) => ({
-      ...prev,
-      [field]: value,
-    }));
-  };
+const updateField = (
+  field: keyof RegistrationFormData,
+  value: any
+) => {
+  setFormData((prev) => ({
+    ...prev,
+    [field]: value,
+  }));
+};
+
+const addStudent = () => {
+  setFormData((prev) => ({
+    ...prev,
+    students: [
+      ...prev.students,
+      {
+        id: crypto.randomUUID(),
+
+        first_name: "",
+        last_name: "",
+
+        age: null,
+        grade: "",
+
+        experience_level: "",
+
+        has_laptop: false,
+        internet_access: false,
+        has_webcam: false,
+        has_microphone: false,
+        can_install_software: false,
+
+        operating_system: "",
+      },
+    ],
+  }));
+};
+const removeStudent = (id: string) => {
+  setFormData((prev) => ({
+    ...prev,
+    students: prev.students.filter(
+      (student) => student.id !== id
+    ),
+  }));
+};
+
+const updateStudent = (
+  id: string,
+  field: keyof StudentData,
+  value: any
+) => {
+  setFormData((prev) => ({
+    ...prev,
+    students: prev.students.map((student) =>
+      student.id === id
+        ? {
+            ...student,
+            [field]: value,
+          }
+        : student
+    ),
+  }));
+};
 
   const handleSubmit = async () => {
     setLoading(true);
@@ -73,36 +134,41 @@ export default function RegistrationForm() {
 
     alert("Registration submitted successfully!");
 
-    setFormData({
+setFormData({
+  parent_name: "",
+  parent_email: "",
+  parent_phone: "",
+  preferred_contact: "Email",
+
+  students: [
+    {
+      id: crypto.randomUUID(),
+
       first_name: "",
       last_name: "",
 
-      parent_name: "",
-      parent_email: "",
-      parent_phone: "",
+      age: null,
+      grade: "",
 
-      student_age: null,
-      student_grade: "",
+      experience_level: "",
 
-      emergency_contact_name: "",
-      emergency_contact_phone: "",
+      has_laptop: false,
+      internet_access: false,
+      has_webcam: false,
+      has_microphone: false,
+      can_install_software: false,
 
-      coding_experience: "",
+      operating_system: "",
+    },
+  ],
 
-    has_laptop: false,
-    internet_access: false,
-    has_webcam: false,
-    has_microphone: false,
-    can_install_software: false,
-    operating_system: "",
+  tuition_plan: "",
 
-      allergies_or_notes: "",
+  parent_notes: "",
 
-      tuition_plan: "",
-
-      agree_to_terms: false,
-      media_release: false,
-    });
+  agree_to_terms: false,
+  media_release: false,
+});
   };
 
   return (
@@ -116,13 +182,15 @@ export default function RegistrationForm() {
       />
 
       <StudentInfo
-        formData={formData}
-        updateField={updateField}
+        students={formData.students}
+        updateStudent={updateStudent}
+        addStudent={addStudent}
+        removeStudent={removeStudent}
       />
 
       <TechnologyCheck
-        formData={formData}
-        updateField={updateField}
+        students={formData.students}
+        updateStudent={updateStudent}
       />
 
       <TuitionSelection

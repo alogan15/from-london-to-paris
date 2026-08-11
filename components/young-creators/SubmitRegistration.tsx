@@ -3,7 +3,19 @@
 import Link from "next/link";
 import { ArrowRight, ShieldCheck } from "lucide-react";
 
-export default function SubmitRegistration() {
+import { RegistrationFormData } from "@/types/registration";
+
+interface SubmitRegistrationProps {
+  formData: RegistrationFormData;
+  loading: boolean;
+  onSubmit: () => void;
+}
+
+export default function SubmitRegistration({
+  formData,
+  loading,
+  onSubmit,
+}: SubmitRegistrationProps) {
   return (
     <section className="rounded-3xl border border-blue-100 bg-white p-8 shadow-lg">
 
@@ -91,9 +103,15 @@ export default function SubmitRegistration() {
       </div>
 
       {/* Submit Button */}
+      {!formData.agree_to_terms && (
+        <p className="mt-8 text-center text-sm text-red-600">
+          Please agree to the required policies before submitting.
+        </p>
+      )}
 
       <button
-        type="submit"
+        type="button"
+        onClick={onSubmit}
         className="
           mt-14
           inline-flex
@@ -112,12 +130,13 @@ export default function SubmitRegistration() {
           hover:-translate-y-1
           hover:bg-blue-700
           hover:shadow-xl
+          disabled:cursor-not-allowed
+          disabled:opacity-60
         "
       >
-        Reserve My Spot
+        {loading ? "Submitting..." : "Reserve My Spot"}
 
-        <ArrowRight size={22} />
-
+        {!loading && <ArrowRight size={22} />}
       </button>
 
       <p className="mt-8 text-sm text-slate-500">

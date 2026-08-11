@@ -16,7 +16,7 @@ export default function SubmitConsultation({
 }: SubmitConsultationProps) {
   
   return (
-    <section className="mx-auto mb-32 max-w-5xl rounded-3xl border border-[#D4AF37]/20 bg-gradient-to-b from-[#D4AF37]/10 to-black p-10 text-center">
+    <section className="rounded-3xl border border-[#D4AF37]/20 bg-gradient-to-b from-[#D4AF37]/10 to-black p-10 text-center">
 
       <p className="uppercase tracking-[0.35em] text-[#D4AF37]">
         READY TO GET STARTED?

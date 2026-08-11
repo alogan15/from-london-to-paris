@@ -14,7 +14,7 @@ export default function ProjectDetails({
 }: ProjectDetailsProps) {
 
   return (
-    <section className="mx-auto mb-20 max-w-5xl rounded-3xl border border-white/10 bg-white/5 p-10">
+    <section className="rounded-3xl border border-white/10 bg-white/5 p-10">
 
       <h2 className="text-3xl font-bold">
         Tell Us About Your Project

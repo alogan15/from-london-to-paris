@@ -25,7 +25,7 @@ export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section className="mx-auto mb-32 max-w-5xl px-6">
+    <section className="px-6">
 
       <div className="text-center">
 

@@ -1,6 +1,6 @@
 export default function ConsultationHero() {
   return (
-    <section className="mx-auto max-w-5xl px-6 pt-36 pb-24 text-center">
+    <section className="px-6 pt-36 pb-24 text-center">
 
       <p className="uppercase tracking-[0.4em] text-[#D4AF37]">
         BOOK A CONSULTATION

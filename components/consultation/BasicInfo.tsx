@@ -14,7 +14,7 @@ export default function BasicInfo({
   updateField,
 }: BasicInfoProps) {
   return (
-    <section className="mx-auto max-w-5xl rounded-3xl border border-white/10 bg-[#0B0B0B] p-10">
+    <section className="rounded-3xl border border-white/10 bg-[#0B0B0B] p-10">
 
       <h2 className="text-3xl font-bold">
         Tell Us About Yourself

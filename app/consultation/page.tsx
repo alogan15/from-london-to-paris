@@ -46,7 +46,7 @@ export default function ConsultationPage() {
   };
 
   return (
-    <main className="space-y-12 pb-24>
+    <main className="space-y-12 pb-24">
       <ConsultationHero />
 
       <BasicInfo

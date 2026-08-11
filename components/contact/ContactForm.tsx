@@ -1,26 +1,61 @@
 "use client";
 
-import { ContactFormData } from "@/types/contact";
+import { useState } from "react";
 
-interface ContactFormProps {
-  formData: ContactFormData;
-  loading: boolean;
-  updateField: (
-    field: keyof ContactFormData,
-    value: any
-  ) => void;
-}
+export default function ContactForm() {
+  const [loading, setLoading] = useState(false);
 
-export default function ContactForm({
-  formData,
-  loading,
-  updateField,
-}: ContactFormProps) {
+  // local form state lives here
+  const [formData, setFormData] = useState({
+  full_name: "",
+  email: "",
+  business_name: "",
+  service: "",
+  budget: "",
+  message: "",
+});
+
+const updateField = (
+  field: keyof typeof formData,
+  value: string
+) => {
+  setFormData((prev) => ({
+    ...prev,
+    [field]: value,
+  }));
+};
+
+const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+
+  setLoading(true);
+
+  try {
+    // await submitContact(formData);
+
+    console.log(formData);
+
+    // Optional: clear the form after successful submit
+    setFormData({
+      full_name: "",
+      email: "",
+      business_name: "",
+      service: "",
+      budget: "",
+      message: "",
+    });
+  } catch (error) {
+    console.error(error);
+  } finally {
+    setLoading(false);
+  }
+};
 
   return (
-    <form
-      className="rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur"
-    >
+      <form
+          onSubmit={handleSubmit}
+          className="rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur"
+        >
       <h2 className="text-3xl font-bold">
         Tell us about your project
       </h2>
@@ -143,12 +178,13 @@ export default function ContactForm({
           />
         </div>
 
-      <button
-        type="submit"
-        className="mt-4 rounded-xl bg-[#D4AF37] px-6 py-4 font-semibold text-black transition hover:scale-[1.02]"
-      >
-        Send Project Inquiry
-      </button>
+        <button
+          type="submit"
+          disabled={loading}
+          className="mt-4 rounded-xl bg-[#D4AF37] px-6 py-4 font-semibold text-black transition hover:scale-[1.02] disabled:cursor-not-allowed disabled:opacity-60"
+        >
+          {loading ? "Sending..." : "Send Project Inquiry"}
+        </button>
 
       </div>
     </form>

@@ -1,5 +1,3 @@
-"use client";
-
 import {
   Laptop,
   Wifi,
@@ -8,6 +6,18 @@ import {
   Download,
   Monitor,
 } from "lucide-react";
+
+import { RegistrationFormData } from "@/types/registration";
+
+interface TechnologyCheckProps {
+  formData: RegistrationFormData;
+  updateField: (
+    field: keyof RegistrationFormData,
+    value: any
+  ) => void;
+}
+
+
 
 const questions = [
   {
@@ -42,7 +52,11 @@ const questions = [
   },
 ];
 
-export default function TechnologyCheck() {
+export default function TechnologyCheck({
+  formData,
+  updateField,
+}: TechnologyCheckProps) {
+
   return (
     <section className="rounded-3xl border border-blue-100 bg-white p-8 shadow-lg">
       <h2 className="text-3xl font-bold text-blue-600">
@@ -76,14 +90,49 @@ export default function TechnologyCheck() {
                     key={option}
                     className="group cursor-pointer"
                   >
-                    <input
-                      type="radio"
-                      name={question.name}
-                      value={option}
-                      className="peer sr-only"
-                    />
+                  <input
+                    type="radio"
+                    name={question.name}
+                    value={option}
+                    checked={
+                      question.name === "computer"
+                        ? formData.has_laptop === (option === "Yes")
+                        : question.name === "internet"
+                        ? formData.internet_access === (option === "Yes")
+                        : question.name === "webcam"
+                        ? formData.has_webcam === (option === "Yes")
+                        : question.name === "microphone"
+                        ? formData.has_microphone === (option === "Yes")
+                        : formData.can_install_software === (option === "Yes")
+                    }
+                    onChange={() => {
+                      const value = option === "Yes";
 
-                    <div
+                      switch (question.name) {
+                        case "computer":
+                          updateField("has_laptop", value);
+                          break;
+
+                        case "internet":
+                          updateField("internet_access", value);
+                          break;
+
+                        case "webcam":
+                          updateField("has_webcam", value);
+                          break;
+
+                        case "microphone":
+                          updateField("has_microphone", value);
+                          break;
+
+                        case "software":
+                          updateField("can_install_software", value);
+                          break;
+                      }
+                    }}
+                    className="peer sr-only"
+                  />
+                  <div
                       className="
                         rounded-2xl
                         border-2
@@ -125,30 +174,34 @@ export default function TechnologyCheck() {
             </h3>
           </div>
 
-          <select
-            className="
-              w-full
-              rounded-2xl
-              border
-              border-slate-200
-              bg-white
-              px-5
-              py-4
-              text-slate-900
-              transition
-              focus:border-blue-600
-              focus:outline-none
-              focus:ring-4
-              focus:ring-blue-100
-            "
-          >
-            <option>Select Operating System</option>
-            <option>Windows</option>
-            <option>Mac</option>
-            <option>Chromebook</option>
-            <option>Linux</option>
-            <option>Other</option>
-          </select>
+            <select
+              value={formData.operating_system}
+              onChange={(e) =>
+                updateField("operating_system", e.target.value)
+              }
+              className="
+                w-full
+                rounded-2xl
+                border
+                border-slate-200
+                bg-white
+                px-5
+                py-4
+                text-slate-900
+                transition
+                focus:border-blue-600
+                focus:outline-none
+                focus:ring-4
+                focus:ring-blue-100
+              "
+            >
+              <option value="">Select Operating System</option>
+              <option value="Windows">Windows</option>
+              <option value="Mac">Mac</option>
+              <option value="Chromebook">Chromebook</option>
+              <option value="Linux">Linux</option>
+              <option value="Other">Other</option>
+            </select>
         </div>
       </div>
     </section>

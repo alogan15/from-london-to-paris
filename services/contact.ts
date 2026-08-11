@@ -1,10 +1,8 @@
 import { supabase } from "./supabase";
 import { ContactFormData } from "@/types/contact";
 
-export async function submitContact(
-  data: ContactFormData
-) {
+export async function submitContact(data: ContactFormData) {
   return await supabase
-    .from("contact_inquiries")
+    .from("contact_requests")
     .insert([data]);
 }

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { submitContact } from "@/services/contact";
 
 export default function ContactForm() {
   const [loading, setLoading] = useState(false);
@@ -30,25 +31,26 @@ const handleSubmit = async (e: React.FormEvent) => {
 
   setLoading(true);
 
-  try {
-    // await submitContact(formData);
+  const { error } = await submitContact(formData);
 
-    console.log(formData);
+  setLoading(false);
 
-    // Optional: clear the form after successful submit
-    setFormData({
-      full_name: "",
-      email: "",
-      business_name: "",
-      service: "",
-      budget: "",
-      message: "",
-    });
-  } catch (error) {
+  if (error) {
+    alert("Something went wrong.");
     console.error(error);
-  } finally {
-    setLoading(false);
+    return;
   }
+
+  alert("Thanks! We'll be in touch shortly.");
+
+  setFormData({
+    full_name: "",
+    email: "",
+    business_name: "",
+    service: "",
+    budget: "",
+    message: "",
+  });
 };
 
   return (

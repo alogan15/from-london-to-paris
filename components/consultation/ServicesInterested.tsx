@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import {
   Globe,
   Code2,
@@ -11,6 +10,15 @@ import {
   CircleHelp,
   CheckCircle,
 } from "lucide-react";
+import { ConsultationFormData } from "@/types/consultation";
+
+interface ServicesInterestedProps {
+  formData: ConsultationFormData;
+  updateField: (
+    field: keyof ConsultationFormData,
+    value: any
+  ) => void;
+}
 
 const services = [
   {
@@ -57,16 +65,26 @@ const services = [
   },
 ];
 
-export default function ServicesInterested() {
-  const [selected, setSelected] = useState<string[]>([]);
+export default function ServicesInterested({
+  formData,
+  updateField,
+}: ServicesInterestedProps) {
 
-  const toggleService = (id: string) => {
-    setSelected((current) =>
-      current.includes(id)
-        ? current.filter((item) => item !== id)
-        : [...current, id]
-    );
-  };
+    const toggleService = (id: string) => {
+      const current = formData.services_interested;
+
+      if (current.includes(id)) {
+        updateField(
+          "services_interested",
+          current.filter((item) => item !== id)
+        );
+      } else {
+        updateField(
+          "services_interested",
+          [...current, id]
+        );
+      }
+    };
 
   return (
     <section className="mx-auto mb-20 max-w-6xl rounded-3xl border border-white/10 bg-white/5 p-10">
@@ -93,8 +111,8 @@ export default function ServicesInterested() {
 
         {services.map((service) => {
           const Icon = service.icon;
-          const isSelected = selected.includes(service.id);
-
+          const isSelected =
+            formData.services_interested.includes(service.id);
           return (
             <button
               key={service.id}

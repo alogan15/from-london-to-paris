@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { ConsultationFormData } from "@/types/consultation";
 import {
   Mail,
   Phone,
@@ -29,8 +29,18 @@ const methods = [
   },
 ];
 
-export default function ContactMethod() {
-  const [selected, setSelected] = useState("");
+interface ContactMethodProps {
+  formData: ConsultationFormData;
+  updateField: (
+    field: keyof ConsultationFormData,
+    value: any
+  ) => void;
+}
+
+export default function ContactMethod({
+  formData,
+  updateField,
+}: ContactMethodProps) {
 
   return (
     <section className="mx-auto mb-20 max-w-6xl rounded-3xl border border-white/10 bg-white/5 p-10">
@@ -57,13 +67,17 @@ export default function ContactMethod() {
 
         {methods.map((method) => {
           const Icon = method.icon;
-          const isSelected = selected === method.id;
+          const isSelected =
+            formData.preferred_contact_method === method.id;
+
 
           return (
             <button
               key={method.id}
               type="button"
-              onClick={() => setSelected(method.id)}
+              onClick={() =>
+                updateField("preferred_contact_method", method.id)
+              }
               className={`relative rounded-3xl border p-8 text-left transition-all duration-300 ${
                 isSelected
                   ? "border-[#D4AF37] bg-[#D4AF37]/10 shadow-[0_0_35px_rgba(212,175,55,0.15)]"

@@ -1,8 +1,20 @@
 "use client";
 
 import { ArrowRight, ShieldCheck } from "lucide-react";
+import { ConsultationFormData } from "@/types/consultation";
 
-export default function SubmitConsultation() {
+interface SubmitConsultationProps {
+  formData: ConsultationFormData;
+  onSubmit: () => void;
+  loading: boolean;
+}
+
+export default function SubmitConsultation({
+  formData,
+  onSubmit,
+  loading,
+}: SubmitConsultationProps) {
+  
   return (
     <section className="mx-auto mb-32 max-w-5xl rounded-3xl border border-[#D4AF37]/20 bg-gradient-to-b from-[#D4AF37]/10 to-black p-10 text-center">
 
@@ -85,12 +97,13 @@ export default function SubmitConsultation() {
       {/* Submit */}
 
       <button
-        type="submit"
-        className="mt-14 inline-flex items-center gap-3 rounded-full bg-[#D4AF37] px-12 py-5 text-lg font-semibold text-black transition-all duration-300 hover:scale-105"
+        type="button"
+        onClick={onSubmit}
+        disabled={loading}
+        className="mt-14 inline-flex items-center gap-3 rounded-full bg-[#D4AF37] px-12 py-5 text-lg font-semibold text-black transition-all duration-300 hover:scale-105 disabled:opacity-50"
       >
-            Request Consultation →
-
-
+        {loading ? "Submitting..." : "Request Consultation"}
+        {!loading && <ArrowRight size={20} />}
       </button>
 
       <p className="mt-8 text-sm text-gray-500">

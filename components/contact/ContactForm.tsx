@@ -1,9 +1,21 @@
 "use client";
 
-import { useState } from "react";
+import { ContactFormData } from "@/types/contact";
 
-export default function ContactForm() {
-  const [loading, setLoading] = useState(false);
+interface ContactFormProps {
+  formData: ContactFormData;
+  loading: boolean;
+  updateField: (
+    field: keyof ContactFormData,
+    value: any
+  ) => void;
+}
+
+export default function ContactForm({
+  formData,
+  loading,
+  updateField,
+}: ContactFormProps) {
 
   return (
     <form
@@ -27,6 +39,10 @@ export default function ContactForm() {
 
           <input
             type="text"
+              value={formData.full_name}
+              onChange={(e) =>
+                updateField("full_name", e.target.value)
+              }
             placeholder="John Smith"
             className="w-full rounded-xl border border-white/10 bg-black px-4 py-3 outline-none transition focus:border-[#D4AF37]"
           />
@@ -40,6 +56,10 @@ export default function ContactForm() {
 
           <input
             type="email"
+              value={formData.email}
+              onChange={(e) =>
+                updateField("email", e.target.value)
+              }
             placeholder="john@email.com"
             className="w-full rounded-xl border border-white/10 bg-black px-4 py-3 outline-none transition focus:border-[#D4AF37]"
           />
@@ -53,6 +73,10 @@ export default function ContactForm() {
 
           <input
             type="text"
+              value={formData.business_name}
+              onChange={(e) =>
+                updateField("business_name", e.target.value)
+              }
             placeholder="ABC Company"
             className="w-full rounded-xl border border-white/10 bg-black px-4 py-3 outline-none transition focus:border-[#D4AF37]"
           />
@@ -65,6 +89,10 @@ export default function ContactForm() {
           </label>
 
           <select
+              value={formData.service}
+              onChange={(e) =>
+                updateField("service", e.target.value)
+              }
             className="w-full rounded-xl border border-white/10 bg-black px-4 py-3 outline-none transition focus:border-[#D4AF37]"
           >
             <option>Website Design</option>
@@ -84,6 +112,10 @@ export default function ContactForm() {
           </label>
 
           <select
+              value={formData.budget}
+              onChange={(e) =>
+                updateField("budget", e.target.value)
+              }
             className="w-full rounded-xl border border-white/10 bg-black px-4 py-3 outline-none transition focus:border-[#D4AF37]"
           >
             <option>Not Sure Yet</option>
@@ -102,18 +134,21 @@ export default function ContactForm() {
 
           <textarea
             rows={6}
+              value={formData.message}
+              onChange={(e) =>
+                updateField("message", e.target.value)
+              }
             placeholder="Tell us about your business, goals, timeline, and anything else we should know..."
             className="w-full rounded-xl border border-white/10 bg-black px-4 py-3 outline-none transition focus:border-[#D4AF37]"
           />
         </div>
 
-        <button
-          type="submit"
-          disabled={loading}
-          className="mt-4 rounded-xl bg-[#D4AF37] px-6 py-4 font-semibold text-black transition hover:scale-[1.02]"
-        >
-          {loading ? "Sending..." : "Send Project Inquiry"}
-        </button>
+      <button
+        type="submit"
+        className="mt-4 rounded-xl bg-[#D4AF37] px-6 py-4 font-semibold text-black transition hover:scale-[1.02]"
+      >
+        Send Project Inquiry
+      </button>
 
       </div>
     </form>

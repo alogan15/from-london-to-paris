@@ -1,7 +1,15 @@
 "use client";
 
-import { useState } from "react";
-import { CheckCircle } from "lucide-react";
+  import { CheckCircle } from "lucide-react";
+  import { ConsultationFormData } from "@/types/consultation";
+
+  interface BudgetTimelineProps {
+  formData: ConsultationFormData;
+  updateField: (
+    field: keyof ConsultationFormData,
+    value: any
+  ) => void;
+}
 
 const budgets = [
   "Under $1,000",
@@ -19,9 +27,10 @@ const timelines = [
   "Just Exploring",
 ];
 
-export default function BudgetTimeline() {
-  const [budget, setBudget] = useState("");
-  const [timeline, setTimeline] = useState("");
+export default function BudgetTimeline({
+  formData,
+  updateField,
+}: BudgetTimelineProps) {
 
   return (
     <section className="mx-auto mb-20 max-w-6xl rounded-3xl border border-white/10 bg-white/5 p-10">
@@ -54,13 +63,13 @@ export default function BudgetTimeline() {
         <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
 
           {budgets.map((item) => {
-            const selected = budget === item;
+            const selected = formData.estimated_budget === item;
 
             return (
               <button
                 key={item}
                 type="button"
-                onClick={() => setBudget(item)}
+                onClick={() => updateField("estimated_budget", item)}
                 className={`relative rounded-2xl border p-6 text-left transition-all duration-300 ${
                   selected
                     ? "border-[#D4AF37] bg-[#D4AF37]/10"
@@ -97,13 +106,13 @@ export default function BudgetTimeline() {
         <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
 
           {timelines.map((item) => {
-            const selected = timeline === item;
-
+          
+          const selected = formData.desired_timeline === item;
             return (
               <button
                 key={item}
                 type="button"
-                onClick={() => setTimeline(item)}
+                onClick={() => updateField("desired_timeline", item)}
                 className={`relative rounded-2xl border p-6 text-left transition-all duration-300 ${
                   selected
                     ? "border-[#D4AF37] bg-[#D4AF37]/10"

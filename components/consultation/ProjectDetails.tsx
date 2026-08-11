@@ -1,4 +1,18 @@
-export default function ProjectDetails() {
+  import { ConsultationFormData } from "@/types/consultation";
+
+  interface ProjectDetailsProps {
+  formData: ConsultationFormData;
+  updateField: (
+    field: keyof ConsultationFormData,
+    value: any
+  ) => void;
+}
+
+export default function ProjectDetails({
+  formData,
+  updateField,
+}: ProjectDetailsProps) {
+
   return (
     <section className="mx-auto mb-20 max-w-5xl rounded-3xl border border-white/10 bg-white/5 p-10">
 
@@ -22,6 +36,10 @@ export default function ProjectDetails() {
 
           <textarea
             rows={6}
+              value={formData.project_description}
+              onChange={(e) =>
+                updateField("project_description", e.target.value)
+              }
             placeholder="Tell us about your project, business, or idea..."
             className="w-full rounded-2xl border border-white/10 bg-black px-6 py-5 leading-8 outline-none transition duration-300 placeholder:text-gray-600 focus:border-[#D4AF37]"
           />
@@ -36,6 +54,10 @@ export default function ProjectDetails() {
 
           <textarea
             rows={4}
+              value={formData.project_goals}
+              onChange={(e) =>
+                updateField("project_goals", e.target.value)
+              }
             placeholder="Examples: Generate more leads, improve customer experience, automate a manual process, launch a new business..."
             className="w-full rounded-2xl border border-white/10 bg-black px-6 py-5 leading-8 outline-none transition duration-300 placeholder:text-gray-600 focus:border-[#D4AF37]"
           />
@@ -50,6 +72,10 @@ export default function ProjectDetails() {
 
           <input
             type="text"
+              value={formData.current_website}
+              onChange={(e) =>
+                updateField("current_website", e.target.value)
+              }
             placeholder="https://yourwebsite.com (leave blank if none)"
             className="w-full rounded-2xl border border-white/10 bg-black px-6 py-5 outline-none transition duration-300 focus:border-[#D4AF37]"
           />
@@ -64,6 +90,10 @@ export default function ProjectDetails() {
 
           <textarea
             rows={3}
+              value={formData.inspiration_sites}
+              onChange={(e) =>
+                updateField("inspiration_sites", e.target.value)
+              }
             placeholder="Share links or describe designs you admire."
             className="w-full rounded-2xl border border-white/10 bg-black px-6 py-5 leading-8 outline-none transition duration-300 placeholder:text-gray-600 focus:border-[#D4AF37]"
           />

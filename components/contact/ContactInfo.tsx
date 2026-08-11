@@ -99,42 +99,42 @@ export default function ContactInfo() {
           <h3 className="uppercase tracking-[0.3em] text-[#D4AF37]">
           Connect
         </h3>
-  <a
-    href="https://fromlondontoparis.com"
-    target="_blank"
-    className="flex items-center gap-3 text-gray-300 transition hover:text-[#D4AF37]"
-  >
-    <Globe className="h-5 w-5" />
-    <span>Website</span>
-  </a>
+            <a
+              href="https://fromlondontoparis.com"
+              target="_blank"
+              className="flex items-center gap-3 text-gray-300 transition hover:text-[#D4AF37]"
+            >
+              <Globe className="h-5 w-5" />
+              <span>Website</span>
+            </a>
 
-  <a
-    href="https://linkedin.com/in/YOUR-LINKEDIN"
-    target="_blank"
-    className="flex items-center gap-3 text-gray-300 transition hover:text-[#D4AF37]"
-  >
-    <BriefcaseBusiness className="h-5 w-5" />
-    <span>LinkedIn</span>
-  </a>
+            <a
+              href="https://linkedin.com/in/YOUR-LINKEDIN"
+              target="_blank"
+              className="flex items-center gap-3 text-gray-300 transition hover:text-[#D4AF37]"
+            >
+              <BriefcaseBusiness className="h-5 w-5" />
+              <span>LinkedIn</span>
+            </a>
 
-  <a
-    href="https://github.com/alogan15"
-    target="_blank"
-    className="flex items-center gap-3 text-gray-300 transition hover:text-[#D4AF37]"
-  >
-    <Code2 className="h-5 w-5" />
-    <span>GitHub</span>
-  </a>
+            <a
+              href="https://github.com/alogan15"
+              target="_blank"
+              className="flex items-center gap-3 text-gray-300 transition hover:text-[#D4AF37]"
+            >
+              <Code2 className="h-5 w-5" />
+              <span>GitHub</span>
+            </a>
 
-  <a
-    href="https://instagram.com/YOUR-INSTAGRAM"
-    target="_blank"
-    className="flex items-center gap-3 text-gray-300 transition hover:text-[#D4AF37]"
-  >
-    <Camera className="h-5 w-5" />
-    <span>Instagram</span>
-  </a>
-</div>
+            <a
+              href="https://instagram.com/YOUR-INSTAGRAM"
+              target="_blank"
+              className="flex items-center gap-3 text-gray-300 transition hover:text-[#D4AF37]"
+            >
+              <Camera className="h-5 w-5" />
+              <span>Instagram</span>
+            </a>
+          </div>
     </div>
   );
 }

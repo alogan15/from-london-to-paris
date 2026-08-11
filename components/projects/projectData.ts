@@ -5,7 +5,7 @@ export const projects = [
     client: "Sociable Travels",
     category: "Luxury Travel Agency Website",
     year: "2026",
-    status: "Completed",
+    status: "In Development",
 
     image: "/projects/sociable-travel.jpg",
 

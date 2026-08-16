@@ -90,7 +90,7 @@ export default function Navbar() {
 
           <Link
             href="/young-creators/enroll"
-            className="hidden lg:flex items-center gap-2 rounded-2xl bg-blue-600 px-6 py-4 font-semibold text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-blue-700 lg:flex"
+            className="hidden items-center gap-2 rounded-2xl bg-blue-600 px-6 py-4 font-semibold text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-blue-700 lg:flex"
           >
             Reserve Your Spot
             <ArrowRight size={18} />
@@ -120,18 +120,7 @@ export default function Navbar() {
       {/* Mobile Drawer */}
 
       <aside
-        className={`fixed
-                  top-0
-                  right-0
-                  z-50
-                  h-screen
-                  w-[85%]
-                  max-w-sm
-                  bg-white
-                  p-8
-                  shadow-2xl
-                  transition-transform duration-300
-        ${
+        className={`fixed right-0 top-0 z-50 h-screen w-80 bg-white p-8 shadow-2xl transition-transform duration-300 ${
           open ? "translate-x-0" : "translate-x-full"
         }`}
       >

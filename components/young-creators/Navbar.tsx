@@ -142,10 +142,10 @@ export default function Navbar() {
           {[
             ["Home", "/young-creators"],
             ["Curriculum", "/young-creators#curriculum"],
-            ["Parents", "/young-creators#parents"],
+            ["Project", "/young-creators#projects"],
             ["Meet Your Instructor", "/young-creators#instructor"],
             ["FAQ", "/young-creators#faq"],
-            ["Contact", "/young-creators#contact"],
+            ["Contact", "/contact"],
           ].map(([label, href]) => (
             <Link
               key={label}

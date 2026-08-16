@@ -143,7 +143,7 @@ export default function Navbar() {
             ["Home", "/young-creators"],
             ["Curriculum", "/young-creators#curriculum"],
             ["Parents", "/young-creators#parents"],
-            ["About", "/young-creators#about"],
+            ["Meet Your Instructor", "/young-creators#instructor"],
             ["FAQ", "/young-creators#faq"],
             ["Contact", "/young-creators#contact"],
           ].map(([label, href]) => (

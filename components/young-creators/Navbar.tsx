@@ -78,7 +78,7 @@ export default function Navbar() {
             </Link>
 
             <Link
-              href="/young-creators/contact"
+              href="/contact"
               className="font-medium text-slate-700 transition hover:text-blue-600"
             >
               Contact

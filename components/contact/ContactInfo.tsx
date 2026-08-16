@@ -21,9 +21,9 @@ export default function ContactInfo() {
       </h2>
 
       <p className="mt-6 text-lg leading-8 text-gray-400">
-        Have a question or want to discuss a project? Reach out using the
-        information below or send us a message. We typically respond within one
-        business day.
+   Whether you're looking to build a website, automate your business, enroll your child in Young Creators Coding Camp, or simply have a question, we'd love to hear from you.
+
+    Tell us a little about what you're looking for and we'll point you in the right direction.
       </p>
 
       <div className="mt-12 space-y-8">

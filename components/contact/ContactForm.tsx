@@ -59,11 +59,11 @@ const handleSubmit = async (e: React.FormEvent) => {
           className="rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur"
         >
       <h2 className="text-3xl font-bold">
-        Tell us about your project
+        How can we help?
       </h2>
 
       <p className="mt-3 text-gray-400">
-        Fill out the form below and we'll reach out within one business day.
+        Whether you're interested in a website, software, automation, the Young Creators Coding Camp, or simply have a question, complete the form below and we'll get back to you within one business day.      
       </p>
 
       <div className="mt-10 grid gap-6">
@@ -105,7 +105,7 @@ const handleSubmit = async (e: React.FormEvent) => {
         {/* Business */}
         <div>
           <label className="mb-2 block text-sm text-gray-300">
-            Business / Organization
+            Business / Organization (Optional)
           </label>
 
           <input
@@ -114,7 +114,7 @@ const handleSubmit = async (e: React.FormEvent) => {
               onChange={(e) =>
                 updateField("business_name", e.target.value)
               }
-            placeholder="ABC Company"
+            placeholder="ABC Company (optional)"
             className="w-full rounded-xl border border-white/10 bg-black px-4 py-3 outline-none transition focus:border-[#D4AF37]"
           />
         </div>
@@ -133,10 +133,15 @@ const handleSubmit = async (e: React.FormEvent) => {
             className="w-full rounded-xl border border-white/10 bg-black px-4 py-3 outline-none transition focus:border-[#D4AF37]"
           >
             <option>Website Design</option>
-            <option>Web Application</option>
+            <option>Custom Web Application</option>
             <option>Business Automation</option>
             <option>AI Solution</option>
             <option>QR Experience</option>
+
+            <option>Young Creators Coding Camp</option>
+
+            <option>General Question</option>
+            <option>Partnership</option>
             <option>Consultation</option>
             <option>Other</option>
           </select>
@@ -145,7 +150,7 @@ const handleSubmit = async (e: React.FormEvent) => {
         {/* Budget */}
         <div>
           <label className="mb-2 block text-sm text-gray-300">
-            Estimated Budget
+            Estimated Budget (if applicable)
           </label>
 
           <select
@@ -166,7 +171,7 @@ const handleSubmit = async (e: React.FormEvent) => {
         {/* Message */}
         <div>
           <label className="mb-2 block text-sm text-gray-300">
-            Project Details *
+            How can we help? *
           </label>
 
           <textarea
@@ -175,7 +180,7 @@ const handleSubmit = async (e: React.FormEvent) => {
               onChange={(e) =>
                 updateField("message", e.target.value)
               }
-            placeholder="Tell us about your business, goals, timeline, and anything else we should know..."
+            placeholder="Tell us about your project, business, coding camp questions, goals, timeline, or anything else you'd like us to know."
             className="w-full rounded-xl border border-white/10 bg-black px-4 py-3 outline-none transition focus:border-[#D4AF37]"
           />
         </div>
@@ -185,7 +190,7 @@ const handleSubmit = async (e: React.FormEvent) => {
           disabled={loading}
           className="mt-4 rounded-xl bg-[#D4AF37] px-6 py-4 font-semibold text-black transition hover:scale-[1.02] disabled:cursor-not-allowed disabled:opacity-60"
         >
-          {loading ? "Sending..." : "Send Project Inquiry"}
+          {loading ? "Sending..." : "Contact Us"}
         </button>
 
       </div>

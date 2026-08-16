@@ -142,7 +142,7 @@ export default function Navbar() {
           {[
             ["Home", "/young-creators"],
             ["Curriculum", "/young-creators#curriculum"],
-            ["Project", "/young-creators#projects"],
+            ["Projects", "/young-creators#projects"],
             ["Meet Your Instructor", "/young-creators#instructor"],
             ["FAQ", "/young-creators#faq"],
             ["Contact", "/contact"],

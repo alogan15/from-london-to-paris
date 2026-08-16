@@ -8,8 +8,7 @@ export default function Step7DomainHosting({
   setFormData,
 }: Props) {
   return (
-    <div className="mx-auto max-w-5xl space-y-16">
-
+    <div className="space-y-10">
       {/* Domain */}
 
       <div>
@@ -18,35 +17,37 @@ export default function Step7DomainHosting({
         </h3>
 
         <div className="grid gap-5 md:grid-cols-2">
-          {["Yes", "No"].map((option) => (
+          {[true, false].map((option) => (
             <button
-              key={option}
+              key={String(option)}
               type="button"
               onClick={() =>
                 setFormData((prev: any) => ({
                   ...prev,
-                  hasDomain: option,
+                  owns_domain: option,
                 }))
               }
               className={`rounded-2xl border p-8 text-left transition ${
-                formData.hasDomain === option
+                formData.owns_domain === option
                   ? "border-[#D4AF37] bg-[#D4AF37]/10"
                   : "border-white/10 bg-white/5 hover:border-[#D4AF37]/50"
               }`}
             >
-              <h4 className="text-xl font-semibold">{option}</h4>
+              <h4 className="text-xl font-semibold">
+                {option ? "Yes" : "No"}
+              </h4>
             </button>
           ))}
         </div>
 
-        {formData.hasDomain === "Yes" && (
+        {formData.owns_domain && (
           <input
             type="text"
-            value={formData.domainName}
+            value={formData.domain_name}
             onChange={(e) =>
               setFormData((prev: any) => ({
                 ...prev,
-                domainName: e.target.value,
+                domain_name: e.target.value,
               }))
             }
             placeholder="example.com"
@@ -63,23 +64,25 @@ export default function Step7DomainHosting({
         </h3>
 
         <div className="grid gap-5 md:grid-cols-2">
-          {["Yes", "No"].map((option) => (
+          {[true, false].map((option) => (
             <button
-              key={option}
+              key={String(option)}
               type="button"
               onClick={() =>
                 setFormData((prev: any) => ({
                   ...prev,
-                  hasHosting: option,
+                  owns_hosting: option,
                 }))
               }
               className={`rounded-2xl border p-8 text-left transition ${
-                formData.hasHosting === option
+                formData.owns_hosting === option
                   ? "border-[#D4AF37] bg-[#D4AF37]/10"
                   : "border-white/10 bg-white/5 hover:border-[#D4AF37]/50"
               }`}
             >
-              <h4 className="text-xl font-semibold">{option}</h4>
+              <h4 className="text-xl font-semibold">
+                {option ? "Yes" : "No"}
+              </h4>
             </button>
           ))}
         </div>
@@ -88,7 +91,6 @@ export default function Step7DomainHosting({
       {/* Hosting Help */}
 
       <div className="rounded-3xl border border-[#D4AF37]/30 bg-[#D4AF37]/5 p-8">
-
         <h3 className="text-2xl font-bold">
           Need help with your domain or hosting?
         </h3>
@@ -98,9 +100,7 @@ export default function Step7DomainHosting({
           connect it, set up secure hosting, SSL certificates,
           business email, and everything needed to get your website online.
         </p>
-
       </div>
-
     </div>
   );
 }

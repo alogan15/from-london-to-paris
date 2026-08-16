@@ -25,11 +25,11 @@ export default function Step2AboutBusiness({
 
           <textarea
             rows={5}
-            value={formData.businessDescription}
+            value={formData.business_description}
             onChange={(e) =>
               setFormData((prev: any) => ({
                 ...prev,
-                businessDescription: e.target.value,
+                business_description: e.target.value,
               }))
             }
             placeholder="We are a family-owned plumbing company serving residential and commercial customers throughout southeastern Pennsylvania..."
@@ -50,11 +50,11 @@ export default function Step2AboutBusiness({
 
           <textarea
             rows={5}
-            value={formData.productsServices}
+            value={formData.products_services}
             onChange={(e) =>
               setFormData((prev: any) => ({
                 ...prev,
-                productsServices: e.target.value,
+                products_services: e.target.value,
               }))
             }
             placeholder="Residential plumbing, emergency repairs, water heater installation, drain cleaning..."
@@ -62,7 +62,7 @@ export default function Step2AboutBusiness({
           />
         </div>
 
-        {/* Differentiator */}
+        {/* Competitive Advantage */}
 
         <div>
           <label className="mb-3 block text-sm font-semibold uppercase tracking-wide text-gray-300">
@@ -75,11 +75,11 @@ export default function Step2AboutBusiness({
 
           <textarea
             rows={5}
-            value={formData.differentiator}
+            value={formData.competitive_advantage}
             onChange={(e) =>
               setFormData((prev: any) => ({
                 ...prev,
-                differentiator: e.target.value,
+                competitive_advantage: e.target.value,
               }))
             }
             placeholder="We've served the community for over 20 years and pride ourselves on honest pricing, fast response times, and exceptional customer service."

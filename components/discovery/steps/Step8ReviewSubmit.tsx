@@ -1,8 +1,15 @@
 type Props = {
   formData: any;
+  loading: boolean;
+  onSubmit: () => void;
 };
 
-export default function Step8ReviewSubmit({ formData }: Props) {
+export default function Step8ReviewSubmit({
+  formData,
+  loading,
+  onSubmit,
+}: Props) {
+  
   return (
     <div className="mx-auto max-w-5xl space-y-10">
 
@@ -31,9 +38,9 @@ export default function Step8ReviewSubmit({ formData }: Props) {
 
         <div className="space-y-3">
 
-          <p><strong>Business:</strong> {formData.businessName || "-"}</p>
+          <p><strong>Business:</strong> {formData.business_name || "-"}</p>
 
-          <p><strong>Contact:</strong> {formData.contactName || "-"}</p>
+          <p><strong>Contact:</strong> {formData.owner_name || "-"}</p>
 
           <p><strong>Email:</strong> {formData.email || "-"}</p>
 
@@ -53,16 +60,16 @@ export default function Step8ReviewSubmit({ formData }: Props) {
 
         <div className="space-y-5">
 
-          <p>{formData.businessDescription || "-"}</p>
+          <p>{formData.business_description || "-"}</p>
 
           <p>
             <strong>Products / Services:</strong><br />
-            {formData.productsServices || "-"}
+            {formData.products_services || "-"}
           </p>
 
           <p>
             <strong>What makes you different?</strong><br />
-            {formData.differentiator || "-"}
+            {formData.competitive_advantage || "-"}
           </p>
 
         </div>
@@ -78,14 +85,14 @@ export default function Step8ReviewSubmit({ formData }: Props) {
         </h3>
 
         <p>
-          {formData.projectGoals.length
-            ? formData.projectGoals.join(", ")
+          {formData.project_goals?.length
+            ? formData.project_goals.join(", ")
             : "-"}
         </p>
 
-        {formData.otherGoal && (
+        {formData.other_goal && (
           <p className="mt-4">
-            <strong>Other:</strong> {formData.otherGoal}
+            <strong>Other:</strong> {formData.other_goal}
           </p>
         )}
 
@@ -100,14 +107,14 @@ export default function Step8ReviewSubmit({ formData }: Props) {
         </h3>
 
         <p>
-          {formData.websiteFeatures.length
-            ? formData.websiteFeatures.join(", ")
+          {formData.website_features?.length
+            ? formData.website_features.join(", ")
             : "-"}
         </p>
 
-        {formData.otherFeature && (
+        {formData.other_feature && (
           <p className="mt-4">
-            <strong>Other:</strong> {formData.otherFeature}
+            <strong>Other:</strong> {formData.other_feature}
           </p>
         )}
 
@@ -122,18 +129,18 @@ export default function Step8ReviewSubmit({ formData }: Props) {
         </h3>
 
         <p>
-          {formData.designStyles.length
-            ? formData.designStyles.join(", ")
+          {formData.design_preferences?.length
+            ? formData.design_preferences.join(", ")
             : "-"}
         </p>
 
         <p className="mt-4">
-          <strong>Brand Colors:</strong> {formData.brandColors || "-"}
+          <strong>Brand Colors:</strong> {formData.preferred_brand_colors || "-"}
         </p>
 
         <p className="mt-4">
           <strong>Inspiration:</strong><br />
-          {formData.inspirationSites || "-"}
+          {formData.websites_you_like || "-"}
         </p>
 
       </div>
@@ -147,20 +154,21 @@ export default function Step8ReviewSubmit({ formData }: Props) {
         </h3>
 
         <p>
-          {formData.contentAssets.length
-            ? formData.contentAssets.join(", ")
-            : "-"}
+          {formData.brand_assets?.length
+            ? formData.brand_assets.join(", ")
+            : "-"
+          }
         </p>
 
-        {formData.otherAsset && (
+        {formData.other_asset && (
           <p className="mt-4">
-            <strong>Other:</strong> {formData.otherAsset}
+            <strong>Other:</strong> {formData.other_asset}
           </p>
         )}
 
         <p className="mt-4">
-          <strong>Need Content Help:</strong>{" "}
-          {formData.needContentHelp || "-"}
+          <strong>Branding Help:</strong>{" "}
+          {formData.branding_help ? "Yes" : "No"}
         </p>
 
       </div>
@@ -173,16 +181,18 @@ export default function Step8ReviewSubmit({ formData }: Props) {
           Domain & Hosting
         </h3>
 
-        <p>
-          <strong>Owns Domain:</strong> {formData.hasDomain || "-"}
+          <p>
+            <strong>Owns Domain:</strong>{" "}
+            {formData.owns_domain ? "Yes" : "No"}
+          </p>
+
+        <p className="mt-3">
+          <strong>Domain:</strong> {formData.domain_name || "-"}
         </p>
 
         <p className="mt-3">
-          <strong>Domain:</strong> {formData.domainName || "-"}
-        </p>
-
-        <p className="mt-3">
-          <strong>Hosting:</strong> {formData.hasHosting || "-"}
+          <strong>Hosting:</strong>{" "}
+          {formData.owns_hosting ? "Yes" : "No"}
         </p>
 
       </div>
@@ -207,11 +217,14 @@ export default function Step8ReviewSubmit({ formData }: Props) {
 
       <div className="flex justify-center">
 
-        <button
-          className="rounded-full bg-[#D4AF37] px-12 py-5 text-lg font-semibold text-black transition hover:scale-105"
-        >
-          Submit Discovery Form
-        </button>
+      <button
+        type="button"
+        onClick={onSubmit}
+        disabled={loading}
+        className="rounded-full bg-[#D4AF37] px-12 py-5 text-lg font-semibold text-black transition hover:scale-105 disabled:opacity-50"
+      >
+        {loading ? "Submitting..." : "Submit Discovery Form"}
+      </button>
 
       </div>
 

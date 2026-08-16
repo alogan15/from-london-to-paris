@@ -23,20 +23,19 @@ export default function Step6ContentAssets({
   const toggleAsset = (asset: string) => {
     setFormData((prev: any) => ({
       ...prev,
-      contentAssets: prev.contentAssets.includes(asset)
-        ? prev.contentAssets.filter((a: string) => a !== asset)
-        : [...prev.contentAssets, asset],
+      brand_assets: prev.brand_assets.includes(asset)
+        ? prev.brand_assets.filter((a: string) => a !== asset)
+        : [...prev.brand_assets, asset],
     }));
   };
 
   return (
-    <div className="mx-auto max-w-5xl">
-
+    <div className="space-y-10">
       {/* Asset Selection */}
 
       <div className="grid gap-5 md:grid-cols-2">
         {assets.map((asset) => {
-          const selected = formData.contentAssets.includes(asset);
+          const selected = formData.brand_assets.includes(asset);
 
           return (
             <button
@@ -65,7 +64,7 @@ export default function Step6ContentAssets({
 
       {/* Other */}
 
-      {formData.contentAssets.includes("Other (Custom)") && (
+      {formData.brand_assets.includes("Other (Custom)") && (
         <div className="mt-8">
           <label className="mb-2 block text-sm font-semibold uppercase tracking-wider text-gray-300">
             Tell us about your additional assets
@@ -73,11 +72,11 @@ export default function Step6ContentAssets({
 
           <input
             type="text"
-            value={formData.otherAsset}
+            value={formData.other_asset}
             onChange={(e) =>
               setFormData((prev: any) => ({
                 ...prev,
-                otherAsset: e.target.value,
+                other_asset: e.target.value,
               }))
             }
             placeholder="Example: Drone footage, employee headshots, brochures..."
@@ -89,33 +88,33 @@ export default function Step6ContentAssets({
       {/* Need Help */}
 
       <div className="mt-16">
-
         <h3 className="mb-8 text-3xl font-bold">
-            Need Help Preparing Your Brand?
+          Need Help Preparing Your Brand?
         </h3>
 
         <div className="grid gap-5 md:grid-cols-2">
-
           <button
             type="button"
             onClick={() =>
               setFormData((prev: any) => ({
                 ...prev,
-                needContentHelp: "Yes",
+                branding_help: true,
               }))
             }
             className={`rounded-2xl border p-8 text-left transition ${
-              formData.needContentHelp === "Yes"
+              formData.branding_help
                 ? "border-[#D4AF37] bg-[#D4AF37]/10"
                 : "border-white/10 bg-white/5 hover:border-[#D4AF37]/50"
             }`}
           >
             <h4 className="text-xl font-semibold">
-                Yes, I'd like professional help
+              Yes, I'd like professional help
             </h4>
 
             <p className="mt-4 text-gray-400">
-             We can assist with branding, website copy, logo design, photography guidance, content organization, and other creative assets needed to launch your website.
+              We can assist with branding, website copy, logo design,
+              photography guidance, content organization, and other creative
+              assets needed to launch your website.
             </p>
           </button>
 
@@ -124,11 +123,11 @@ export default function Step6ContentAssets({
             onClick={() =>
               setFormData((prev: any) => ({
                 ...prev,
-                needContentHelp: "No",
+                branding_help: false,
               }))
             }
             className={`rounded-2xl border p-8 text-left transition ${
-              formData.needContentHelp === "No"
+              formData.branding_help === false
                 ? "border-[#D4AF37] bg-[#D4AF37]/10"
                 : "border-white/10 bg-white/5 hover:border-[#D4AF37]/50"
             }`}
@@ -141,11 +140,8 @@ export default function Step6ContentAssets({
               I already have everything needed for my project.
             </p>
           </button>
-
         </div>
-
       </div>
-
     </div>
   );
 }

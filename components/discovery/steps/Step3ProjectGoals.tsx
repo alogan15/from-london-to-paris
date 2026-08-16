@@ -26,9 +26,9 @@ export default function Step3ProjectGoals({
   const toggleGoal = (goal: string) => {
     setFormData((prev: any) => ({
       ...prev,
-      projectGoals: prev.projectGoals.includes(goal)
-        ? prev.projectGoals.filter((g: string) => g !== goal)
-        : [...prev.projectGoals, goal],
+    project_goals: prev.project_goals.includes(goal)
+      ? prev.project_goals.filter((g: string) => g !== goal)
+      : [...prev.project_goals, goal],
     }));
   };
 
@@ -43,7 +43,7 @@ export default function Step3ProjectGoals({
             type="button"
             onClick={() => toggleGoal(goal)}
             className={`rounded-2xl border p-6 text-left transition ${
-              formData.projectGoals.includes(goal)
+            formData.project_goals.includes(goal)
                 ? "border-[#D4AF37] bg-[#D4AF37]/10"
                 : "border-white/10 bg-white/5 hover:border-[#D4AF37]/50"
             }`}
@@ -54,7 +54,7 @@ export default function Step3ProjectGoals({
                 {goal}
               </span>
 
-              {formData.projectGoals.includes(goal) && (
+              {formData.project_goals.includes(goal) && (
                 <span className="text-[#D4AF37] text-xl">
                   ✓
                 </span>
@@ -62,7 +62,7 @@ export default function Step3ProjectGoals({
             </div>
           </button>      
         ))}        
-        {formData.projectGoals.includes("Other (Custom)") && (
+        {formData.project_goals.includes("Other (Custom)") && (
           <div className="mt-8">
             <label className="mb-2 block text-sm font-semibold uppercase tracking-wider text-gray-300">
               Tell us about your project goal
@@ -70,12 +70,12 @@ export default function Step3ProjectGoals({
 
             <input
               type="text"
-              value={formData.otherGoal}
+              value={formData.other_goal}
               onChange={(e) =>
-                setFormData({
-                  ...formData,
-                  otherGoal: e.target.value,
-                })
+                setFormData((prev: any) => ({
+                  ...prev,
+                  other_goal: e.target.value,
+                }))
               }
               placeholder="Example: Build an internal employee portal, launch an online course, create a client portal..."
               className="w-full rounded-xl border border-white/10 bg-white/5 px-5 py-4 text-white placeholder:text-gray-500 focus:border-[#D4AF37] focus:outline-none"

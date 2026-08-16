@@ -20,11 +20,11 @@ export default function Step1BusinessInfo({
 
           <input
             type="text"
-            value={formData.businessName}
+            value={formData.business_name}
             onChange={(e) =>
               setFormData((prev: any) => ({
                 ...prev,
-                businessName: e.target.value,
+              business_name: e.target.value,
               }))
             }
             placeholder="From London to Paris LLC"
@@ -41,11 +41,11 @@ export default function Step1BusinessInfo({
 
           <input
             type="text"
-            value={formData.contactName}
+            value={formData.owner_name}
             onChange={(e) =>
               setFormData((prev: any) => ({
                 ...prev,
-                contactName: e.target.value,
+              owner_name: e.target.value,
               }))
             }
             placeholder="John Smith"

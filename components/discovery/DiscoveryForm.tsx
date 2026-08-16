@@ -11,41 +11,64 @@ import Step6ContentAssets from "./steps/Step6ContentAssets";
 import Step7DomainHosting from "./steps/Step7DomainHosting";
 import Step8ReviewSubmit from "./steps/Step8ReviewSubmit";
 import StepHeader from "./StepHeader";
+import { submitDiscovery } from "@/services/discovery";
+
+
 
 
 export default function DiscoveryForm() {
+const [loading, setLoading] = useState(false);
+
+const handleSubmit = async () => {
+  try {
+    setLoading(true);
+
+    console.log(formData);
+
+    await submitDiscovery(formData);
+
+    console.log(JSON.stringify(formData, null, 2));
+
+    alert("Discovery form submitted!");
+  } catch (err) {
+    console.error(err);
+    alert("Something went wrong.");
+  } finally {
+    setLoading(false);
+  }
+};
 const [step, setStep] = useState(1);
 
 const [formData, setFormData] = useState({
-  businessName: "",
-  contactName: "",
+  business_name: "",
+  owner_name: "",
   email: "",
   phone: "",
 
-  businessDescription: "",
-  productsServices: "",
-  differentiator: "",
+  business_description: "",
+  products_services: "",
+  competitive_advantage: "",
 
-  projectGoals: [] as string[],
-  otherGoal: "",
+  project_goals: [] as string[],
+  other_goal: "",
 
-  websiteFeatures: [] as string[],
+  website_features: [] as string[],
+  other_feature:"",
 
-  designStyles: [] as string[],
-  otherDesignStyle: "",
-  brandColors: "",
-  inspirationSites: "",
+  design_preferences: [] as string[],
+  brand_assets: [] as string[],
+  preferred_brand_colors: "",
+  websites_you_like: "",
 
-  otherFeature: "",
+  branding_help: false,
 
-  contentAssets: [] as string[],
-  otherAsset: "",
-  needContentHelp: "",
+  owns_domain: false,
+  owns_hosting: false,
 
-  hasDomain: "",
-  domainName: "",
-  hasHosting: "",
+  domain_name: "",
 });
+
+
   return (
     <div className="mx-auto max-w-5xl">
 
@@ -163,32 +186,32 @@ const [formData, setFormData] = useState({
             )}
 
             {step === 8 && (
-              <Step8ReviewSubmit
+            <Step8ReviewSubmit
                 formData={formData}
-              />
+                loading={loading}
+                onSubmit={handleSubmit}
+            />
             )}
 
       {/* Navigation */}
+        <div className="mt-16 flex justify-between">
+          <button
+            onClick={() => setStep(Math.max(step - 1, 1))}
+            disabled={step === 1}
+            className="rounded-full border border-white/20 px-8 py-4 disabled:opacity-30"
+          >
+            ← Previous
+          </button>
 
-      <div className="mt-16 flex justify-between">
-
-        <button
-          onClick={() => setStep(Math.max(step - 1, 1))}
-          disabled={step === 1}
-          className="rounded-full border border-white/20 px-8 py-4 disabled:opacity-30"
-        >
-          ← Previous
-        </button>
-
-        <button
-          onClick={() => setStep(Math.min(step + 1, 8))}
-          className="rounded-full bg-[#D4AF37] px-8 py-4 font-semibold text-black transition hover:scale-105"
-        >
-          Next →
-        </button>
-
-      </div>
-
+          {step < 8 && (
+            <button
+              onClick={() => setStep(step + 1)}
+              className="rounded-full bg-[#D4AF37] px-8 py-4 font-semibold text-black transition hover:scale-105"
+            >
+              Next →
+            </button>
+          )}
+        </div>
     </div>
   );
 }

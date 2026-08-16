@@ -233,7 +233,9 @@ const projects = [
 
           {/* What Students Build */}
 
-<section className="mx-auto max-w-7xl px-6 py-28">
+<section 
+    id="projects"
+    className="mx-auto max-w-7xl px-6 py-28">
 
   <div className="text-center">
 

@@ -122,7 +122,9 @@ const projects = [
 
       {/* Why Young Creators */}
 
-      <section className="mx-auto max-w-7xl px-6 py-24">
+      <section 
+          id="curriculum"
+          className="mx-auto max-w-7xl px-6 py-24">
 
         <div className="text-center">
 
@@ -342,7 +344,9 @@ const projects = [
 
 {/* Meet Your Instructor */}
 
-<section className="mx-auto max-w-7xl px-6 py-32">
+<section 
+    id="instructor"
+    className="mx-auto max-w-7xl px-6 py-32">
 
   <div className="grid items-center gap-20 lg:grid-cols-2">
 
@@ -449,7 +453,9 @@ const projects = [
 
 {/* Frequently Asked Questions */}
 
-<section className="mx-auto max-w-7xl px-6 py-32">
+<section 
+    id="faq"
+    className="mx-auto max-w-7xl px-6 py-32">
 
 <div className="text-center">
 

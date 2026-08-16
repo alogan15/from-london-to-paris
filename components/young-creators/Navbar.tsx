@@ -10,7 +10,7 @@ export default function Navbar() {
 
   return (
     <>
-      <header className="relative sticky top-0 z-50 border-b border-slate-200 bg-white/90 backdrop-blur-xl shadow-sm">
+      <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/90 backdrop-blur-xl shadow-sm">
         <div className="mx-auto flex h-24 max-w-7xl items-center justify-between px-6">
 
           {/* Logo */}
@@ -106,7 +106,7 @@ export default function Navbar() {
           </button>
 
         </div>
-      </header>
+      </>
 
       {/* Overlay */}
 
@@ -121,12 +121,17 @@ export default function Navbar() {
 
       <aside
         className={`absolute
-                    top-full
-                    right-0
-                    w-full
-                    bg-white
-                    shadow-2xl
-                    z-50
+                  fixed
+                  top-0
+                  right-0
+                  z-50
+                  h-screen
+                  w-[85%]
+                  max-w-sm
+                  bg-white
+                  p-8
+                  shadow-2xl
+                  transition-transform duration-300
         ${
           open ? "translate-x-0" : "translate-x-full"
         }`}

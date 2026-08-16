@@ -1,4 +1,9 @@
+
+
+
 export default function RegistrationHero() {
+
+
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-sky-50 via-white to-blue-50">
 

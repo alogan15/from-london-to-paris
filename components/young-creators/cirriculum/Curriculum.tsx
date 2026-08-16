@@ -4,7 +4,6 @@ import { useState } from "react";
 
 import { lessons } from "./weekData";
 import Playground from "./Playground";
-import WeekCard from "./WeekCard";
 
 export default function Curriculum() {
   const [selectedLesson, setSelectedLesson] = useState(lessons[0]);

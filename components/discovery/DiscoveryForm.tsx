@@ -14,8 +14,6 @@ import StepHeader from "./StepHeader";
 import { submitDiscovery } from "@/services/discovery";
 
 
-
-
 export default function DiscoveryForm() {
 const [loading, setLoading] = useState(false);
 

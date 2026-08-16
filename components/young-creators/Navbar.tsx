@@ -20,7 +20,7 @@ export default function Navbar() {
             className="flex items-center gap-4"
           >
             <Image
-              src="/logo/logo.png"
+              src="/logo/yclogo.png"
               alt="Young Creators"
               width={65}
               height={65}

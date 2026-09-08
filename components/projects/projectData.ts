@@ -1,5 +1,58 @@
 
 export const projects = [
+    {
+    title: "Drama Club Brand Clothing x Accessories",
+    client: "Drama Club Brand Clothing x Accessories",
+    category: "Clothing Brand Website",
+    year: "2026",
+    status: "In Development",
+
+    image: "/projects/drama-club.png",
+
+    problem:
+      "The client wanted a bold, modern website that reflected the personality of the Drama Club brand while creating an engaging experience for customers to explore clothing and accessories.",
+
+    solution:
+      "Designed and developed a responsive e-commerce experience focused on bold visual presentation, product discovery, brand storytelling, and a dynamic shopping experience.",
+
+    services: [
+      "Website Design",
+      "Responsive Development",
+      "E-Commerce Development",
+      "Custom UI/UX",
+    ],
+
+    results: [
+      "Responsive Website",
+      "Mobile Optimized",
+      "Dynamic User Experience",
+      "E-Commerce Ready",
+      "Professional Brand Presence",
+    ],
+
+    deliverables: [
+      "Custom UI/UX",
+      "Responsive Layout",
+      "Product Showcase",
+      "Clothing & Accessories",
+      "Shopping Experience",
+      "Brand Storytelling",
+    ],
+
+    stack: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Supabase",
+      "Square",
+      "Printful",
+      "Vercel",
+    ],
+
+    demo: "https://drama-club-clothing-brand.vercel.app/",
+    github: "#",
+  },
+
   {
     title: "Sociable Travels",
     client: "Sociable Travels",

@@ -15,6 +15,13 @@ export const projects = [
     solution:
       "Designed and developed a responsive e-commerce experience focused on bold visual presentation, product discovery, brand storytelling, and a dynamic shopping experience.",
 
+
+      testimonial: {
+        quote: "Insert the client's actual feedback here.",
+        name: "Clarence Gans",
+        role: "CEO, Drama Club Brand Clothing x Accessories",
+      },
+
     services: [
       "Website Design",
       "Responsive Development",
@@ -58,7 +65,7 @@ export const projects = [
     client: "Sociable Travels",
     category: "Luxury Travel Agency Website",
     year: "2026",
-    status: "In Development",
+    status: "Launched",
 
     image: "/projects/sociable-travel.jpg",
 
@@ -67,6 +74,12 @@ export const projects = [
 
     solution:
       "Designed and developed a responsive marketing website featuring destination showcases, service highlights, testimonials, and a guided discovery experience for prospective travelers.",
+
+      testimonial: {
+        quote: "Insert the client's actual feedback here.",
+        name: "Nastasia S.",
+        role: "Owner/Founder, Sociable Travels",
+      },
 
     services: [
       "Website Design",
@@ -119,6 +132,12 @@ export const projects = [
     solution:
       "Built a custom golf league management platform with leaderboards, Stableford scoring, player statistics, standings, and season recaps.",
 
+      // testimonial: {
+      //   quote: "Insert the client's actual feedback here.",
+      //   name: "Andre Logan.",
+      //   role: "Owner, From London to Paris LLc.",
+      // },
+
     services: [
       "Web Application",
       "Database Design",
@@ -167,6 +186,12 @@ export const projects = [
     solution:
       "Developed an interactive listening experience where attendees rate each song, leave comments, and provide real-time feedback that is instantly available to the artist.",
 
+      testimonial: {
+        quote: "Insert the client's actual feedback here.",
+        name: "Brett Lynch, Wayne Peace",
+        role: "Artist, Pay Homage",
+      },
+
     services: [
       "Web Application",
       "Feedback System",
@@ -213,6 +238,12 @@ export const projects = [
 
     solution:
       "Created a six-week curriculum teaching HTML, CSS, and JavaScript while guiding students through building and launching their own websites.",
+
+      // testimonial: {
+      //   quote: "Insert the client's actual feedback here.",
+      //   name: "Andre Logan",
+      //   role: "Owner, Young Creators Coding Camp",
+      // },
 
     services: [
       "Curriculum Design",
